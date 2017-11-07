@@ -20,30 +20,6 @@
             </p>
             {% endif %}
 <!-- content starts here -->
-<div class="well">
-  <h3>{{ page.summary }}</h3>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{ page.short }}">Try the app</button>
-  <a class="btn btn-primary" href="{{ site.shiny_url }}{{ page.link }}" target="_blank">Open in new window <i class="fa fa-external-link" aria-hidden="true"></i></a>
-</div>
-
-<div class="modal fade" id="modal-{{ page.short }}" tabindex="-1" role="dialog" aria-labelledby="modal-{{ page.short }}-label">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">{{ page.title }}</h4>
-      </div>
-      <div class="modal-body">
-        <iframe src="{{ site.shiny_url }}{{ page.link }}" height="600px" width="100%" frameborder='0'>Loading...</iframe>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <a class="btn btn-primary" href="{{ site.shiny_url }}{{ page.link }}" target="_blank">Open in new window <i class="fa fa-external-link" aria-hidden="true"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
-
             {{ content }}
 <!-- content ends here -->
             {% if page.disqus %}{% include _comments.html %}{% endif %}
