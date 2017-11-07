@@ -1,0 +1,66 @@
+---
+layout: plain
+---
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="hidden-xs">&nbsp;</div>
+        <h3>This is a jekyll based template</h3>
+        <h3>Let's see how it works for catalogue</h3>
+      </div>
+
+      <div class="col-sm-6">
+        <center>
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-pause="">
+
+          <!-- Indicators -->
+          <ol class="carousel-indicators hide">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active" data-slide="0">
+              <img src="{{site.baseurl}}/images/map1.png" width="100%" alt="Map 1">
+            </div>
+            <div class="item" data-slide="1">
+              <img src="{{site.baseurl}}/images/map2.png" width="100%" alt="Map 2">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container -->
+</div> <!-- jumbotron -->
+
+<div class="section-tout">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Catalogue</h2>
+        {% for map in site.categories.catalogue %}
+        <div class="row">
+          <div class="col-md-4">
+            <div class="image">
+              <a href="{{ site.baseurl }}{{ map.url }}"><img src="{{ site.baseurl }}/images/{{ map.thumb }}" alt="{{ map.short }}" class="img-responsive" width="100%"></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4><a href="{{ site.baseurl }}{{ map.url }}">{{ map.title }}</a></h4>
+            <p>{{ map.excerpt | strip_html }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>

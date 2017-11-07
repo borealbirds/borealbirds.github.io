@@ -1,0 +1,33 @@
+title: "DataScience4G"
+description: "Data Science for General Audiences"
+
+#baseurl:  http://localhost:4000
+baseurl: https://borealbirds.github.io
+
+include: [".htaccess"]
+exclude: ["README.md","LICENSE.md"]
+timezone: America/Edmonton
+
+encoding: UTF-8
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Bootswatch theme (cosmo)
+bswtheme: yeti
+# fancy fonts on/off
+fancyfonts: true
+# navbar style: inverse, transparent
+navbar: transparent
+
+disqus:
+ads: false
+
+author: "<a href='http://borealbirds.cs'>Boreal Avian Modelling Project</a>"
+author_plain: 'Boreal Avian Modelling Project'
+
+gems:
+  - jekyll-feed
+  - jekyll-sitemap

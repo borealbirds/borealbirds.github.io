@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title | strip_html }} &#8211; {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<meta name="keywords" content="{{ page.tags | join: ', ' }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+{% capture bswtheme %}{% if page.bswtheme %}{{ page.bswtheme }}{% else %}{{ site.bswtheme }}{% endif %}{% endcapture %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/{{ bswtheme }}/bootstrap.min.css" media="screen">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style type="text/css">
+    {% if site.fancyfonts == true %}/* different font family */
+    @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+    /*@import url('https://fonts.googleapis.com/css?family=Asap+Condensed');*/
+    {% endif %}
+    /* padding for bootstrap navbar */
+    body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        {% if site.fancyfonts == true %}font-family: 'PT Sans', sans-serif;{% endif %}
+    }
+    /* Google custom search look and feel */
+    .gsc-results-wrapper-overlay, .gsc-results-wrapper-visible, .gsc-search-button, .gsc-search-button-v2 {
+        box-sizing: content-box;
+    }
+    /* same color as inline code */
+    h1, h2, h3, h4, h5, h6 {
+        {% if site.fancyfonts == true %}font-family: 'PT Sans', sans-serif;{% endif %}
+    }
+    .modal-body {
+        position: relative;
+        overflow-y: auto;
+        max-height: 100%;
+    }
+    .modal {
+        max-height: 90%;
+        overflow-y: auto;
+    }
+</style>
+<!-- IE -->
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" />
+<!-- other browsers -->
+<link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" />
