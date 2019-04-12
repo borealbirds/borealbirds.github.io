@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BAM National Models</title>
+  <title>BAM National Model Results</title>
   <link href="https://fonts.googleapis.com/css?family=Contrail+One|Titillium+Web" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="./assets/css/fontawesome-all.min.css" />
   <link rel="stylesheet" type="text/css" href="./assets/css/bulma.min.css" />
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <section class="hero is-medium is-primary is-bold">
+  <section class="hero is-primary is-bold">
     <div class="hero-head">
       <nav class="navbar">
         <div class="container">
@@ -29,10 +29,10 @@
           </div>
           <div id="navMenu" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item is-active">
+              <a class="navbar-item" href="./index.html">
                 Home
               </a>
-              <a class="navbar-item" href="./results.html">
+              <a class="navbar-item is-active">
                 Results
               </a>
               <a class="navbar-item" href="./methods.html">
@@ -51,27 +51,31 @@
         <h2 class="subtitle">
           by the Boreal Avian Modelling Project
         </h2>
+        <br/>
       </div>
+      <div class="container has-text-centered">
+          <div class="level-item has-text-centered">
+            <div class="field is-grouped" id="spp-search">
+              <div class="control has-icons-left">
+                <div id="scrollable-dropdown-menu">
+                  <input class="input typeahead" id="spp-select" type="text" placeholder="Start typing a species name">
+                  <span class="icon is-medium is-left">
+                    <i class="fa fa-search"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="level">
+        </nav>
     </div>
   </section>
  
   <section>
     <div class="columns">
       <div class="column is-8 is-offset-2">
-
-      <div class="tile is-ancestor">
-        <div class="tile">
-          <article class="tile is-child notification is-warning">
-            <p class="title">National model updates</p>
-            <p class="subtitle">Check distribution maps, land cover associations, and population size estimates</p>
-            <a class="button is-warning is-inverted is-outlined is-large" href="./results.html">
-              <span>Check report</span>
-              <span class="icon"><i class="fa fa-arrow-right"></i></span>
-            </a>
-          </article>
-        </div>
-      </div>
-
+          <div id="results"></div>
       </div>
     </div>
   </section>
@@ -87,4 +91,6 @@
 </body>
 <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="./assets/js/basic.js"></script>
+<script type="text/javascript" src="./assets/js/typeahead.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/js/species.js"></script>
 </html>
