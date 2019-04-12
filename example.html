@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAM National Model Results</title>
+  <link href="https://fonts.googleapis.com/css?family=Contrail+One|Titillium+Web" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/fontawesome-all.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/custom.css" />
+  <link rel="shortcut icon" href="./favicon.ico">
+</head>
+<body>
+
+  <section class="hero is-primary is-bold">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="http://www.borealbirds.ca/" target=_blank>
+              <img src="./assets/images/bamlogo.png" alt="BAM">
+            </a>
+            <span class="navbar-burger burger" data-target="navMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" href="./index.html">
+                Home
+              </a>
+              <a class="navbar-item is-active">
+                Results
+              </a>
+              <a class="navbar-item" href="./methods.html">
+                Methods
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          National Bird Species Model Results
+        </h1>
+        <h2 class="subtitle">
+          by the Boreal Avian Modelling Project
+        </h2>
+        <br/>
+      </div>
+      <div class="container has-text-centered">
+          <div class="level-item has-text-centered">
+            <div class="field is-grouped" id="spp-search">
+              <div class="control has-icons-left">
+                <div id="scrollable-dropdown-menu">
+                  <input class="input typeahead" id="spp-select" type="text" placeholder="Start typing a species name">
+                  <span class="icon is-medium is-left">
+                    <i class="fa fa-search"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="level">
+        </nav>
+    </div>
+  </section>
+ 
+  <section>
+    <div class="columns">
+      <div class="column is-10 is-offset-1">
+          <div id="results">
+
+              <h2 class="title">Distribution</h2>
+              
+              <div class="columns">
+                <div class="column is-two-thirds">
+
+                  <h2 class="subtitle">Current version</h2>
+                  <figure class="image image-modal" data-target="#modalMap1">
+                    <img id="modalImg" src="http://borealbirds.github.io/api/v4/species/ALFL/map.png" alt="Density map">
+                  </figure>
+                  <div class="modal"  id="modalMap1">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <p class="image">
+                        <img src="http://borealbirds.github.io/api/v4/species/ALFL/map.png" alt="Density map">
+                      </p>
+                    </div>
+                    <button class="modal-close is-large" aria-label="close"></button>
+                  </div>
+                
+              </div>
+
+              <div class="column is-one-thirds">
+
+                <h2 class="subtitle">Past versions</h2>
+                <figure class="image image-modal" data-target="#modalMap2">
+                  <img id="modalImg" src="http://www.borealbirds.ca/files/results/relative_density_estimates/ALFL_Density_April30_2012.jpg" alt="Old density map" style="margin-bottom: 20px;">
+                </figure>
+                <div class="modal"  id="modalMap2">
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <p class="image">
+                      <img src="http://www.borealbirds.ca/files/results/relative_density_estimates/ALFL_Density_April30_2012.jpg" alt="Old density map">
+                    </p>
+                  </div>
+                  <button class="modal-close is-large" aria-label="close"></button>
+                </div>
+
+                <figure class="image image-modal" data-target="#modalMap3">
+                  <img id="modalImg" src="http://www.borealbirds.ca/files/results/habitat_suitability/ALFL_SUIT_MAX.jpg" alt="Old MaxEnt map">
+                </figure>
+                <div class="modal"  id="modalMap3">
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <p class="image">
+                      <img src="http://www.borealbirds.ca/files/results/habitat_suitability/ALFL_SUIT_MAX.jpg" alt="Old MaxEnt map">
+                    </p>
+                  </div>
+                  <button class="modal-close is-large" aria-label="close"></button>
+                </div>
+                                                  
+              </div>
+            </div>
+  
+
+            <div class="columns">
+              <div class="column is-half">
+
+                <h2 class="title">Population size</h2>
+                <p>Here comes a table with BCR level densities and abundances in Canada.</p>
+                <div id="NationalTable"></div>
+
+            </div>
+
+            <div class="column is-half">
+
+              <h2 class="title">LCC</h2>
+              <p>Here comes a figure with LCC specific densities and abundances in Canada.</p>
+              <div id="NationalPlot"></div>
+
+            </div>
+          </div>
+
+          <h2 class="title">BCR level results</h2>
+          
+            <div class="buttons is-centered">
+              <span id="bcr4" class="button is-rounded">BCR 4</span>
+              <span id="bcr5" class="button is-rounded">BCR 5</span>
+              <span id="bcr6" class="button is-rounded is-primary">BCR 6</span>
+              <span id="bcr7" class="button is-rounded">BCR 7</span>
+              <span id="bcr8" class="button is-rounded">BCR 8</span>
+              <span id="bcr9" class="button is-rounded">BCR 9</span>
+              <span id="bcr10" class="button is-rounded">BCR 10</span>
+              <span id="bcr11" class="button is-rounded">BCR 11</span>
+              <span id="bcr12" class="button is-rounded">BCR 12</span>
+              <span id="bcr13" class="button is-rounded">BCR 13</span>
+              <span id="bcr14" class="button is-rounded">BCR 14</span>
+            </div>    
+          
+          <div class="columns">
+            <div class="column is-half">
+              
+              <p>Here comes a table with LCC specific densities and abundances in the BCR.</p>
+              <div id="BcrTable"></div>
+            
+            </div>
+
+            <div class="column is-half">
+
+              <p>Here comes a figure with LCC specific densities OR abundances in the BCR.</p>
+              <div id="BcrPlot"></div>
+                                              
+            </div>
+          </div>
+
+
+
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p id="footer"></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/js/basic.js"></script>
+<script type="text/javascript" src="./assets/js/typeahead.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/js/species.js"></script>
+<script type="text/javascript" src="./assets/js/plotly-latest.min.js"></script>
+<script>
+
+
+
+
+var xData = ['Product<br>Revenue', 'Services<br>Revenue',
+  'Total<br>Revenue', 'Fixed<br>Costs',
+  'Variable<br>Costs', 'Total<br>Costs', 'Total'
+];
+
+var yData = [400, 660, 660, 590, 400, 400, 340];
+
+var textList = ['$430K', '$260K', '$690K', '$-120K', '$-200K', '$-320K', '$370K'];
+
+//Base
+
+var trace1 = {
+  x: xData,
+  y: [0, 430, 0, 570, 370, 370, 0],
+  marker: {
+    color: 'rgba(1,1,1,0.0)'
+  },
+  type: 'bar'
+};
+
+//Revenue
+
+var trace2 = {
+  x: xData,
+  y: [430, 260, 690, 0, 0, 0, 0],
+  type: 'bar',
+  marker: {
+    color: 'rgba(55,128,191,0.7)',
+    line: {
+      color: 'rgba(55,128,191,1.0)',
+      width: 2
+    }
+  }
+};
+
+//Cost
+
+var trace3 = {
+  x: xData,
+  y: [0, 0, 0, 120, 200, 320, 0],
+  type: 'bar',
+  marker: {
+    color: 'rgba(219, 64, 82, 0.7)',
+    line: {
+      color: 'rgba(219, 64, 82, 1.0)',
+      width: 2
+    }
+  }
+};
+
+//Profit
+
+var trace4 = {
+  x: xData,
+  y: [0, 0, 0, 0, 0, 0, 370],
+  type: 'bar',
+  marker: {
+    color: 'rgba(50,171, 96, 0.7)',
+    line: {
+      color: 'rgba(50,171,96,1.0)',
+      width: 2
+    }
+  }
+};
+
+var data = [trace1, trace2, trace3, trace4];
+
+var layout = {
+  title: 'Annual Profit 2015',
+  barmode: 'stack',
+//  showlegend: false,
+  annotations: []
+};
+
+for ( var i = 0 ; i < 7 ; i++ ) {
+  var result = {
+    x: xData[i],
+    y: yData[i],
+    text: textList[i],
+    font: {
+      family: 'Arial',
+      size: 14,
+      color: 'rgba(245,246,249,1)'
+    },
+    showarrow: false
+  };
+  layout.annotations.push(result);
+};
+Plotly.newPlot('NationalPlot', 
+  data, 
+  layout,
+  {
+    //displayModeBar: false,
+    displaylogo: false,
+    responsive: true
+  }
+);
+
+
+var dataBcrPlot = [
+  {
+    x: ['giraffes', 'orangutans', 'monkeys'],
+    y: [20, 14, 23],
+    type: 'bar'
+  }
+];
+
+Plotly.newPlot('BcrPlot', 
+  dataBcrPlot,
+  {
+    title: 'BCR level NALC densities',
+  },
+  {
+    //displayModeBar: false,
+    displaylogo: false,
+    responsive: true
+  }
+);
+
+</script>
+
+</html>
