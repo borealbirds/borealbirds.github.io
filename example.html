@@ -9,6 +9,8 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/fontawesome-all.min.css" />
   <link rel="stylesheet" type="text/css" href="./assets/css/bulma.min.css" />
   <link rel="stylesheet" type="text/css" href="./assets/css/custom.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/dataTables.bulma.css" />
   <link rel="shortcut icon" href="./favicon.ico">
 </head>
 <body>
@@ -80,13 +82,13 @@
               <h2 class="title">Distribution</h2>
               
               <div class="columns">
-                <div class="column is-two-thirds">
+                <div class="column is-two-fifths">
 
-                  <h2 class="subtitle">Current version</h2>
-                  <figure class="image image-modal" data-target="#modalMap1">
+                  <h2 class="subtitle">Recent version</h2>
+                  <figure class="image image-modal" data-target="#modalMap0">
                     <img id="modalImg" src="http://borealbirds.github.io/api/v4/species/ALFL/map.png" alt="Density map">
                   </figure>
-                  <div class="modal"  id="modalMap1">
+                  <div class="modal"  id="modalMap0">
                     <div class="modal-background"></div>
                     <div class="modal-content">
                       <p class="image">
@@ -96,93 +98,101 @@
                     <button class="modal-close is-large" aria-label="close"></button>
                   </div>
                 
-              </div>
-
-              <div class="column is-one-thirds">
-
-                <h2 class="subtitle">Past versions</h2>
-                <figure class="image image-modal" data-target="#modalMap2">
-                  <img id="modalImg" src="http://www.borealbirds.ca/files/results/relative_density_estimates/ALFL_Density_April30_2012.jpg" alt="Old density map" style="margin-bottom: 20px;">
-                </figure>
-                <div class="modal"  id="modalMap2">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <p class="image">
-                      <img src="http://www.borealbirds.ca/files/results/relative_density_estimates/ALFL_Density_April30_2012.jpg" alt="Old density map">
-                    </p>
-                  </div>
-                  <button class="modal-close is-large" aria-label="close"></button>
                 </div>
 
-                <figure class="image image-modal" data-target="#modalMap3">
-                  <img id="modalImg" src="http://www.borealbirds.ca/files/results/habitat_suitability/ALFL_SUIT_MAX.jpg" alt="Old MaxEnt map">
-                </figure>
-                <div class="modal"  id="modalMap3">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <p class="image">
-                      <img src="http://www.borealbirds.ca/files/results/habitat_suitability/ALFL_SUIT_MAX.jpg" alt="Old MaxEnt map">
-                    </p>
+                <div class="column is-two-fifths">
+
+                    <h2 class="subtitle">With detections</h2>
+                    <!-- Show here half and half the map with and w/o detections, no old map -->
+                    <figure class="image image-modal" data-target="#modalMap1">
+                      <img id="modalImg" src="http://borealbirds.github.io/api/v4/species/ALFL/mapwdet.png" alt="Density map">
+                    </figure>
+                    <div class="modal"  id="modalMap1">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <p class="image">
+                          <img src="http://borealbirds.github.io/api/v4/species/ALFL/mapwdet.png" alt="Density map">
+                        </p>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                  
                   </div>
-                  <button class="modal-close is-large" aria-label="close"></button>
+  
+
+                <div class="column is-one-fifths">
+
+                  <h2 class="subtitle">Past versions</h2>
+                  <figure class="image image-modal" data-target="#modalMap2">
+                    <img id="modalImg" src="http://www.borealbirds.ca/files/results/relative_density_estimates/ALFL_Density_April30_2012.jpg" alt="Old density map" style="margin-bottom: 20px;">
+                  </figure>
+                  <div class="modal"  id="modalMap2">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <p class="image">
+                        <img src="http://www.borealbirds.ca/files/results/relative_density_estimates/ALFL_Density_April30_2012.jpg" alt="Old density map">
+                      </p>
+                    </div>
+                    <button class="modal-close is-large" aria-label="close"></button>
+                  </div>
+
+                  <figure class="image image-modal" data-target="#modalMap3">
+                    <img id="modalImg" src="http://www.borealbirds.ca/files/results/habitat_suitability/ALFL_SUIT_MAX.jpg" alt="Old MaxEnt map">
+                  </figure>
+                  <div class="modal"  id="modalMap3">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <p class="image">
+                        <img src="http://www.borealbirds.ca/files/results/habitat_suitability/ALFL_SUIT_MAX.jpg" alt="Old MaxEnt map">
+                      </p>
+                    </div>
+                    <button class="modal-close is-large" aria-label="close"></button>
+                  </div>
+                                                    
                 </div>
-                                                  
+
               </div>
-            </div>
   
 
             <div class="columns">
               <div class="column is-half">
 
                 <h2 class="title">Population size</h2>
-                <p>Here comes a table with BCR level densities and abundances in Canada.</p>
-                <div id="NationalTable"></div>
+                <p>Population sizes (million individuals).</p>
+                <div id="PopsizeTable">
+                    <table id="popsize" class="table" width="100%"></table>
+                </div>
 
             </div>
 
             <div class="column is-half">
 
               <h2 class="title">LCC</h2>
-              <p>Here comes a figure with LCC specific densities and abundances in Canada.</p>
-              <div id="NationalPlot"></div>
+              <p>Here comes a figure with LCC specific densities and abundances in Canada.</p>                 <div class="buttons has-addons is-centered">
+                  <span id="AllBCR" class="button is-small is-rounded is-primary">All</span>
+                  <span id="bcr4" class="button is-small is-rounded">4</span>
+                  <span id="bcr5" class="button is-small is-rounded">5</span>
+                  <span id="bcr6" class="button is-small is-rounded">6</span>
+                  <span id="bcr7" class="button is-small is-rounded">7</span>
+                  <span id="bcr8" class="button is-small is-rounded">8</span>
+                  <span id="bcr9" class="button is-small is-rounded">9</span>
+                  <span id="bcr10" class="button is-small is-rounded">10</span>
+                  <span id="bcr11" class="button is-small is-rounded">11</span>
+                  <span id="bcr12" class="button is-small is-rounded">12</span>
+                  <span id="bcr13" class="button is-small is-rounded">13</span>
+                  <span id="bcr14" class="button is-small is-rounded">14</span>
+              </div>    
+    
+              <div id="NalcPlot">
+                  <div id="nalcplot"></div>
+              </div>
 
             </div>
           </div>
 
-          <h2 class="title">BCR level results</h2>
           
-            <div class="buttons is-centered">
-              <span id="bcr4" class="button is-rounded">BCR 4</span>
-              <span id="bcr5" class="button is-rounded">BCR 5</span>
-              <span id="bcr6" class="button is-rounded is-primary">BCR 6</span>
-              <span id="bcr7" class="button is-rounded">BCR 7</span>
-              <span id="bcr8" class="button is-rounded">BCR 8</span>
-              <span id="bcr9" class="button is-rounded">BCR 9</span>
-              <span id="bcr10" class="button is-rounded">BCR 10</span>
-              <span id="bcr11" class="button is-rounded">BCR 11</span>
-              <span id="bcr12" class="button is-rounded">BCR 12</span>
-              <span id="bcr13" class="button is-rounded">BCR 13</span>
-              <span id="bcr14" class="button is-rounded">BCR 14</span>
-            </div>    
           
-          <div class="columns">
-            <div class="column is-half">
-              
-              <p>Here comes a table with LCC specific densities and abundances in the BCR.</p>
-              <div id="BcrTable"></div>
-            
-            </div>
-
-            <div class="column is-half">
-
-              <p>Here comes a figure with LCC specific densities OR abundances in the BCR.</p>
-              <div id="BcrPlot"></div>
-                                              
-            </div>
-          </div>
-
-
-
+ 
           </div>
       </div>
     </div>
@@ -202,130 +212,149 @@
 <script type="text/javascript" src="./assets/js/typeahead.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/js/species.js"></script>
 <script type="text/javascript" src="./assets/js/plotly-latest.min.js"></script>
+<script type="text/javascript" src="./assets/js/datatables.min.js"></script>
+<script type="text/javascript" src="./assets/js/dataTables.bulma.min.js"></script>
 <script>
 
 
 
-
-var xData = ['Product<br>Revenue', 'Services<br>Revenue',
-  'Total<br>Revenue', 'Fixed<br>Costs',
-  'Variable<br>Costs', 'Total<br>Costs', 'Total'
-];
-
-var yData = [400, 660, 660, 590, 400, 400, 340];
-
-var textList = ['$430K', '$260K', '$690K', '$-120K', '$-200K', '$-320K', '$370K'];
-
-//Base
-
-var trace1 = {
-  x: xData,
-  y: [0, 430, 0, 570, 370, 370, 0],
-  marker: {
-    color: 'rgba(1,1,1,0.0)'
-  },
-  type: 'bar'
-};
-
-//Revenue
-
-var trace2 = {
-  x: xData,
-  y: [430, 260, 690, 0, 0, 0, 0],
-  type: 'bar',
-  marker: {
-    color: 'rgba(55,128,191,0.7)',
-    line: {
-      color: 'rgba(55,128,191,1.0)',
-      width: 2
-    }
-  }
-};
-
-//Cost
-
-var trace3 = {
-  x: xData,
-  y: [0, 0, 0, 120, 200, 320, 0],
-  type: 'bar',
-  marker: {
-    color: 'rgba(219, 64, 82, 0.7)',
-    line: {
-      color: 'rgba(219, 64, 82, 1.0)',
-      width: 2
-    }
-  }
-};
-
-//Profit
-
-var trace4 = {
-  x: xData,
-  y: [0, 0, 0, 0, 0, 0, 370],
-  type: 'bar',
-  marker: {
-    color: 'rgba(50,171, 96, 0.7)',
-    line: {
-      color: 'rgba(50,171,96,1.0)',
-      width: 2
-    }
-  }
-};
-
-var data = [trace1, trace2, trace3, trace4];
-
-var layout = {
-  title: 'Annual Profit 2015',
-  barmode: 'stack',
-//  showlegend: false,
-  annotations: []
-};
-
-for ( var i = 0 ; i < 7 ; i++ ) {
-  var result = {
-    x: xData[i],
-    y: yData[i],
-    text: textList[i],
-    font: {
-      family: 'Arial',
-      size: 14,
-      color: 'rgba(245,246,249,1)'
+$(document).ready(function() {
+  var data = {
+  "data": {
+    "species": {
+      "id": ["ALFL"],
+      "common": ["Alder Flycatcher"],
+      "scientific": ["Empidonax alnorum"],
+      "family": ["Tyrannidae"],
+      "combo": ["Alder Flycatcher (Empidonax alnorum)"],
+      "previous": [null],
+      "next": ["AMCR"]
     },
-    showarrow: false
-  };
-  layout.annotations.push(result);
-};
-Plotly.newPlot('NationalPlot', 
-  data, 
-  layout,
-  {
-    //displayModeBar: false,
-    displaylogo: false,
-    responsive: true
+    "bcr": ["4 Northwestern Interior Forest", "5 Northern Pacific Rainforest", "6 Boreal Taiga Plains", "7 Taiga Shield And Hudson Plains", "8 Boreal Softwood Shield", "9 Great Basin", "10 Northern Rockies", "11 Prarie Potholes", "12 Boreal Hardwood Transition", "13 Lower Great Lakes/ St. Lawrence Plain", "14 Atlantic Northern Forest"],
+    "nalc": ["1 Conifer", "2 Taiga Conifer", "5 Deciduous", "6 Mixedwood", "8 Shrub", "10 Grass", "11 Arctic Shrub", "12 Arctic Grass", "14 Wetland", "15 Cropland"],
+    "popsize": {
+      "columns": ["BCR", "Area", "Nmean", "Dmean"],
+      "ntotal": [0, 6.2129, 132.8455, 0.2138],
+      "nbybcr": [
+        [4, 0.5459, 7.4812, 0.1371],
+        [5, 0.1362, 0.3595, 0.0264],
+        [6, 1.1837, 27.8601, 0.2354],
+        [7, 1.4899, 29.72, 0.1995],
+        [8, 1.3163, 42.6184, 0.3238],
+        [9, 0.0552, 0.0733, 0.0133],
+        [10, 0.3724, 2.9506, 0.0792],
+        [11, 0.4435, 1.6654, 0.0376],
+        [12, 0.3732, 8.4593, 0.2266],
+        [13, 0.1018, 1.1718, 0.1151],
+        [14, 0.1949, 10.4859, 0.538]
+      ]
+    },
+    "habitat": {
+      "columns": ["1", "2", "5", "6", "8", "10", "11", "12", "14", "15"],
+      "rows": ["4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
+      "dtotal": {
+        "nalc": [1, 2, 5, 6, 8, 10, 11, 12, 14, 15],
+        "Area": [1.9832, 0.5238, 0.4301, 1.126, 0.5037, 0.1933, 0.1098, 0.3953, 0.3983, 0.5495],
+        "Nmean": [37.6796, 11.5469, 14.0273, 32.2687, 12.4778, 3.0892, 1.322, 3.311, 12.7549, 4.368],
+        "Dmean": [0.19, 0.2205, 0.3262, 0.2866, 0.2477, 0.1598, 0.1204, 0.0838, 0.3203, 0.0795]
+      },
+      "dbynalc": [
+        [14.103, 15.0521, 14.8494, 17.3179, 14.1462, 11.0258, 16.4891, 8.9485, 18.4796, 18],
+        [2.4924, 6.08, 4.2442, 2.9501, 2.8529, 3.0799, 7, 3.0944, 1.8512, 0.944],
+        [21.4458, 27.8736, 23.6462, 24.4698, 31.9148, 30.2621, 17.8107, 14.0788, 25.057, 14.4334],
+        [21.8043, 18.3231, 33.3895, 28.4041, 26.6364, 16.9918, 9.5366, 7.4119, 30.5649, 31],
+        [26.5311, 28.752, 45.1515, 33.7105, 44.8466, 32.2723, 28.6077, 38.786, 37.8221, 74.8144],
+        [1.343, 0, 1.4104, 1.1154, 1.2953, 1.1615, 0, 1.2922, 1.1271, 1.2036],
+        [7.9377, 0, 12.206, 14.0628, 7.0108, 7.7887, 0, 4.1175, 10.4722, 3.976],
+        [10.0232, 0, 14.0811, 14.6002, 5.4426, 2.9488, 0, 2.8696, 9.2933, 3.4873],
+        [22.499, 0, 24.3356, 21.4559, 43.2262, 32.9505, 34.3611, 24.1667, 30.6301, 30.8307],
+        [11.8174, 0, 15.3112, 20.69, 18.5312, 5.7898, 11.3734, 15.0769, 11.4066, 9.3752],
+        [40.6317, 0, 59.3811, 48.8426, 43.5146, 68.784, 73.5072, 58.1034, 70.4834, 65.7358]
+      ]
+    }
   }
-);
+}
 
+// 0 is all, rest is 1:11 as in 4:14
+var bcr = 0;
+if (bcr == 0) {
+  var dbcr = data.data.habitat.dtotal.Dmean;
+} else {
+  var dbcr = data.data.habitat.dbynalc[bcr];
+}
 
+var barcolor = ['#3ad1a3',"#177c30"]
 var dataBcrPlot = [
   {
-    x: ['giraffes', 'orangutans', 'monkeys'],
-    y: [20, 14, 23],
-    type: 'bar'
+    x: data.data.nalc,
+    y: dbcr,
+    type: 'bar',
+    marker: {
+      color: [barcolor[0],barcolor[0],barcolor[0],barcolor[0],barcolor[0],
+              barcolor[0],barcolor[0],barcolor[0],barcolor[0],barcolor[0]]
+    }
   }
 ];
-
-Plotly.newPlot('BcrPlot', 
+var myPlot = document.getElementById('nalcplot');
+Plotly.newPlot('nalcplot', 
   dataBcrPlot,
   {
-    title: 'BCR level NALC densities',
+    title: 'Densities (inds./ha) by land cover',
   },
   {
     //displayModeBar: false,
     displaylogo: false,
-    responsive: true
+    responsive: true,
+    editable: false
   }
 );
+myPlot.on('plotly_hover', function(data){
+  var pn='',
+      tn='',
+      colors=[];
+  for(var i=0; i < data.points.length; i++){
+    pn = data.points[i].pointNumber;
+    tn = data.points[i].curveNumber;
+    colors = data.points[i].data.marker.color;
+  };
+  colors[pn] = barcolor[1];
 
+  var update = {'marker':{color: colors, size:16}};
+  Plotly.restyle('nalcplot', update, [tn]);
+});
+
+myPlot.on('plotly_unhover', function(data){
+  var pn='',
+      tn='',
+      colors=[];
+  for(var i=0; i < data.points.length; i++){
+    pn = data.points[i].pointNumber;
+    tn = data.points[i].curveNumber;
+    colors = data.points[i].data.marker.color;
+  };
+  colors[pn] = barcolor[0];
+
+  var update = {'marker':{color: colors, size:16}};
+  Plotly.restyle('nalcplot', update, [tn]);
+});
+
+    // population size tabe
+    // !!! include total in text or highlight in a pill or something
+    $('#popsize').DataTable( {
+        data: data.data.popsize.nbybcr,
+        columns: [
+            { title: data.data.popsize.columns[0] },
+            { title: data.data.popsize.columns[1] },
+            { title: data.data.popsize.columns[2] },
+            { title: data.data.popsize.columns[3] }
+        ],
+        searching: false, 
+        paging: false, 
+        info: false
+    } );
+
+
+});
 </script>
 
 </html>
