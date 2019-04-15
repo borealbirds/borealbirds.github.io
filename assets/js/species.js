@@ -144,6 +144,8 @@ $(document).ready(function() {
       $("#modalImg3b").attr("src", "http://www.borealbirds.ca/files/results/relative_density_estimates/" + id + "_Density_April30_2012.jpg");
       $("#modalImg4a").attr("src", "http://www.borealbirds.ca/files/results/habitat_suitability/" + id + "_SUIT_MAX.jpg");
       $("#modalImg4b").attr("src", "http://www.borealbirds.ca/files/results/habitat_suitability/" + id + "_SUIT_MAX.jpg");
+      $("#modalImg5a").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/dbynalc.png");
+      $("#modalImg5b").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/dbynalc.png");
 
       // population size tabe
       Table.destroy();
