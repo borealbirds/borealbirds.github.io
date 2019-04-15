@@ -74,8 +74,141 @@
  
   <section>
     <div class="columns">
-      <div class="column is-8 is-offset-2">
-          <div id="results"></div>
+      <div class="column is-10 is-offset-1">
+        <div id="results">
+            
+            <!-- this is where real content starts -->
+
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="title" id="speciesName"></p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Population size</p>
+                    <p class="title" id="speciesPop"></p>
+                  </div>
+                </div>
+            </nav>
+
+            <h2 class="title">Distribution</h2>
+          
+            <div class="columns">
+              <div class="column is-two-fifths">
+
+                <h2 class="subtitle">Recent version</h2>
+                <figure class="image image-modal" data-target="#modalMap0">
+                  <img id="modalImg1a" src="" alt="Density map">
+                </figure>
+                <div class="modal"  id="modalMap0">
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <p class="image">
+                      <img id="modalImg1b" src="" alt="Density map">
+                    </p>
+                  </div>
+                  <button class="modal-close is-large" aria-label="close"></button>
+                </div>
+              
+              </div>
+
+              <div class="column is-two-fifths">
+
+                <h2 class="subtitle">With detections</h2>
+
+                <figure class="image image-modal" data-target="#modalMap1">
+                  <img id="modalImg2a" src="" alt="Density map">
+                </figure>
+                <div class="modal"  id="modalMap1">
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <p class="image">
+                      <img id="modalImg2b" src="" alt="Density map">
+                    </p>
+                  </div>
+                  <button class="modal-close is-large" aria-label="close"></button>
+                </div>
+              
+              </div>
+
+
+              <div class="column is-one-fifths">
+
+                <h2 class="subtitle">Past versions</h2>
+
+                <figure class="image image-modal" data-target="#modalMap2">
+                  <img id="modalImg3a" src="" alt="Old density map" style="margin-bottom: 20px;">
+                </figure>
+                <div class="modal"  id="modalMap2">
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <p class="image">
+                      <img id="modalImg3b" src="" alt="Old density map">
+                    </p>
+                  </div>
+                  <button class="modal-close is-large" aria-label="close"></button>
+                </div>
+
+                <figure class="image image-modal" data-target="#modalMap3">
+                  <img id="modalImg4a" src="" alt="Old MaxEnt map">
+                </figure>
+                <div class="modal"  id="modalMap3">
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <p class="image">
+                      <img id="modalImg4b" src="" alt="Old MaxEnt map">
+                    </p>
+                  </div>
+                  <button class="modal-close is-large" aria-label="close"></button>
+                </div>
+                                                
+              </div>
+
+            </div>
+
+
+            <div class="columns">
+              <div class="column is-half">
+
+                <h2 class="title">Population size</h2>
+
+                <div id="PopsizeTable">
+                    <table id="popsize" class="table" width="100%"></table>
+                </div>
+
+            </div>
+
+            <div class="column is-half">
+
+              <h2 class="title">Land cover associations</h2>
+
+              <div class="buttons has-addons is-centered">
+                  <span id="AllBCR" class="button is-small is-rounded is-primary">All</span>
+                  <span id="bcr4" class="button is-small is-rounded">4</span>
+                  <span id="bcr5" class="button is-small is-rounded">5</span>
+                  <span id="bcr6" class="button is-small is-rounded">6</span>
+                  <span id="bcr7" class="button is-small is-rounded">7</span>
+                  <span id="bcr8" class="button is-small is-rounded">8</span>
+                  <span id="bcr9" class="button is-small is-rounded">9</span>
+                  <span id="bcr10" class="button is-small is-rounded">10</span>
+                  <span id="bcr11" class="button is-small is-rounded">11</span>
+                  <span id="bcr12" class="button is-small is-rounded">12</span>
+                  <span id="bcr13" class="button is-small is-rounded">13</span>
+                  <span id="bcr14" class="button is-small is-rounded">14</span>
+              </div>    
+
+              <div id="NalcPlot">
+                  <div id="nalcplot"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- this is where real content ends -->
+
+        </div>
       </div>
     </div>
   </section>
@@ -93,4 +226,7 @@
 <script type="text/javascript" src="./assets/js/basic.js"></script>
 <script type="text/javascript" src="./assets/js/typeahead.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/js/species.js"></script>
+<script type="text/javascript" src="./assets/js/plotly-latest.min.js"></script>
+<script type="text/javascript" src="./assets/js/datatables.min.js"></script>
+<script type="text/javascript" src="./assets/js/dataTables.bulma.min.js"></script>
 </html>
