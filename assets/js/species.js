@@ -140,10 +140,10 @@ $(document).ready(function() {
       $("#modalImg1b").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/map.png");
       $("#modalImg2a").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/mapwdet.png");
       $("#modalImg2b").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/mapwdet.png");
-      $("#modalImg3a").attr("src", "http://www.borealbirds.ca/files/results/relative_density_estimates/" + id + "_Density_April30_2012.jpg");
-      $("#modalImg3b").attr("src", "http://www.borealbirds.ca/files/results/relative_density_estimates/" + id + "_Density_April30_2012.jpg");
-      $("#modalImg4a").attr("src", "http://www.borealbirds.ca/files/results/habitat_suitability/" + id + "_SUIT_MAX.jpg");
-      $("#modalImg4b").attr("src", "http://www.borealbirds.ca/files/results/habitat_suitability/" + id + "_SUIT_MAX.jpg");
+      $("#modalImg3a").attr("src", "http://borealbirds.github.io/api/v2/density/" + id + "_Density_April30_2012.jpg");
+      $("#modalImg3b").attr("src", "http://borealbirds.github.io/api/v2/density/" + id + "_Density_April30_2012.jpg");
+      $("#modalImg4a").attr("src", "http://borealbirds.github.io/api/v2/maxent/pts/" + id + ".jpg");
+      $("#modalImg4b").attr("src", "http://borealbirds.github.io/api/v2/maxent/pts/" + id + ".jpg");
       $("#modalImg5a").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/dbynalc.png");
       $("#modalImg5b").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/dbynalc.png");
 
