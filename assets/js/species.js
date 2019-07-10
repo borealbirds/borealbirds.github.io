@@ -136,16 +136,16 @@ $(document).ready(function() {
       $("#speciesPop").text(Math.round(10*data.data.popsize.ntotal[2])/10 + "M inds.");
 
       // update map links
-      $("#modalImg1a").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/map.png");
-      $("#modalImg1b").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/map.png");
-      $("#modalImg2a").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/mapwdet.png");
-      $("#modalImg2b").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/mapwdet.png");
-      $("#modalImg3a").attr("src", "http://borealbirds.github.io/api/v2/density/" + id + "_Density_April30_2012.jpg");
-      $("#modalImg3b").attr("src", "http://borealbirds.github.io/api/v2/density/" + id + "_Density_April30_2012.jpg");
-      $("#modalImg4a").attr("src", "http://borealbirds.github.io/api/v2/maxent/pts/" + id + ".jpg");
-      $("#modalImg4b").attr("src", "http://borealbirds.github.io/api/v2/maxent/pts/" + id + ".jpg");
-      $("#modalImg5a").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/dbynalc.png");
-      $("#modalImg5b").attr("src", "http://borealbirds.github.io/api/v4/species/" + id + "/dbynalc.png");
+      $("#modalImg1a").attr("src", "/api/v4/species/" + id + "/map.png");
+      $("#modalImg1b").attr("src", "/api/v4/species/" + id + "/map.png");
+      $("#modalImg2a").attr("src", "/api/v4/species/" + id + "/mapwdet.png");
+      $("#modalImg2b").attr("src", "/api/v4/species/" + id + "/mapwdet.png");
+      $("#modalImg3a").attr("src", "/api/v2/density/" + id + "_Density_April30_2012.jpg");
+      $("#modalImg3b").attr("src", "/api/v2/density/" + id + "_Density_April30_2012.jpg");
+      $("#modalImg4a").attr("src", "/api/v2/maxent/pts/" + id + ".jpg");
+      $("#modalImg4b").attr("src", "/api/v2/maxent/pts/" + id + ".jpg");
+      $("#modalImg5a").attr("src", "/api/v4/species/" + id + "/dbynalc.png");
+      $("#modalImg5b").attr("src", "/api/v4/species/" + id + "/dbynalc.png");
 
       // population size tabe
       Table.destroy();
