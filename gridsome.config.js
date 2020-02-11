@@ -56,7 +56,7 @@ module.exports = {
           title: node.title,
           description: node.summary,
           url: 'https://borealbirds.github.io' + node.path,
-          author: 'Boreal Avian Modelling project',
+          author: 'Boreal Avian Modelling Project',
           date: node.date
         }),
         output: {

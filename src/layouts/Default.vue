@@ -46,8 +46,9 @@
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
         <div class="mb-8 lg:mb-0">
           <div>
-            &copy; <a href="https://borealbirds.ualberta.ca/" class="text-white hover:text-gray-400 font-normal">Boreal Avian Modelling Project</a>
-            {{ new Date().getFullYear() }} under a
+            &copy; {{ new Date().getFullYear() }}
+            <a href="https://borealbirds.ualberta.ca/" class="text-white hover:text-gray-400 font-normal">Boreal Avian Modelling Project</a>
+            under a
             <a href="https://creativecommons.org/licenses/by/4.0/" class="text-white hover:text-gray-400 font-normal">CC BY 4.0</a> license
           </div>
           <div>
