@@ -49,7 +49,7 @@
             &copy; {{ new Date().getFullYear() }}
             <a href="https://borealbirds.ualberta.ca/" class="text-white hover:text-gray-400 font-normal">Boreal Avian Modelling Project</a>
             under a
-            <a href="https://creativecommons.org/licenses/by/4.0/" class="text-white hover:text-gray-400 font-normal">CC BY 4.0</a> license
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-white hover:text-gray-400 font-normal">CC BY-SA 4.0</a> license
           </div>
           <div>
             <a href="/rss.xml" class="text-white hover:text-gray-400 font-normal">RSS Feed</a> |
