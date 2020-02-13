@@ -9,4 +9,13 @@
 </template>
 
 <script>
+export default {
+  metaInfo: {
+    title: 'Methods',
+    meta: [
+      { key: 'description', name: 'description', content: 'Bird modelling methods' },
+      { name: 'author', content: 'Boreal Avian Modelling Project' }
+    ]
+  }
+}
 </script>

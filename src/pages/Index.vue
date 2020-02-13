@@ -46,7 +46,11 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'Home',
+    meta: [
+      { key: 'description', name: 'description', content: 'Bird Species Model Results' },
+      { name: 'author', content: 'Boreal Avian Modelling Project' }
+    ]
   }
 }
 </script>

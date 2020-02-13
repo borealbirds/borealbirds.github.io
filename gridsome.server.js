@@ -11,6 +11,13 @@ const pick = require('lodash.pick');
 const { pathPrefix } = require('./gridsome.config')
 
 module.exports = function (api, options) {
+  api.createPages(({ createPage }) => {
+    createPage({
+      path: '/species/:id(\\d+)',
+      component: './src/templates/Species.vue'
+    })
+  })
+
   api.loadSource(store => {
     /*
     Clean the pathPrefix

@@ -23,7 +23,11 @@ console.log(sppList)
 
 export default {
   metaInfo: {
-    title: 'Species'
+    title: 'Species',
+    meta: [
+      { key: 'description', name: 'description', content: 'Bird species list' },
+      { name: 'author', content: 'Boreal Avian Modelling Project' }
+    ]
   },
   data: function () {
       return {
