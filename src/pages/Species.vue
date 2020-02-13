@@ -5,8 +5,8 @@
       <div v-for="spp in sppList" :key="spp.id" class="mb-5">
         <h2 class="text-2xl font-bold"><g-link :to="'/species/' + spp.id" class="text-copy-primary">{{ spp.english }}</g-link></h2>
         <div class="text-copy-secondary mb-4">
-          <!--<span>{{ spp.french }}</span>
-          <span> &middot; </span>-->
+          <span>{{ spp.french }}</span>
+          <span> &middot; </span>
           <span><em>{{ spp.scientific }}</em></span>
           <span> &middot; </span>
           <span>Family {{ spp.family }}</span>
@@ -26,7 +26,8 @@ export default {
     title: 'Species',
     meta: [
       { key: 'description', name: 'description', content: 'Bird species list' },
-      { name: 'author', content: 'Boreal Avian Modelling Project' }
+      { name: 'author', content: 'Boreal Avian Modelling Project' },
+      { name: 'charset', content: 'utf-8' }
     ]
   },
   data: function () {

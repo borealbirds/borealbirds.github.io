@@ -49,7 +49,8 @@ export default {
     title: 'Home',
     meta: [
       { key: 'description', name: 'description', content: 'Bird Species Model Results' },
-      { name: 'author', content: 'Boreal Avian Modelling Project' }
+      { name: 'author', content: 'Boreal Avian Modelling Project' },
+      { name: 'charset', content: 'utf-8' }
     ]
   }
 }

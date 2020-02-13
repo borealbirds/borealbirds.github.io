@@ -14,7 +14,8 @@ export default {
     title: 'Methods',
     meta: [
       { key: 'description', name: 'description', content: 'Bird modelling methods' },
-      { name: 'author', content: 'Boreal Avian Modelling Project' }
+      { name: 'author', content: 'Boreal Avian Modelling Project' },
+      { name: 'charset', content: 'utf-8' }
     ]
   }
 }
