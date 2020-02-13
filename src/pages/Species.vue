@@ -18,8 +18,6 @@
 
 <script>
 import sppList from '@/data/species.json'
-console.log('HERE')
-console.log(sppList)
 
 export default {
   metaInfo: {
