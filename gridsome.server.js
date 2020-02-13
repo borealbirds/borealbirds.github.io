@@ -9,14 +9,9 @@ const fs = require('fs');
 const path = require('path');
 const pick = require('lodash.pick');
 const { pathPrefix } = require('./gridsome.config')
+const axios = require('axios')
 
 module.exports = function (api, options) {
-  // api.createPages(({ createPage }) => {
-  //   createPage({
-  //     path: '/species/:id(\\d+)',
-  //     component: './src/templates/Species.vue'
-  //   })
-  // })
 
   api.loadSource(store => {
     /*
@@ -49,6 +44,24 @@ module.exports = function (api, options) {
     Using page-queries,   axios( this.$page.metaData.pathPrefix   + "/fileName" )
     */
     store.addMetadata('pathPrefix', cleanedPathPrefix)
+
+    // https://gridsome.org/docs/pages-api#create-pages-from-external-apis
+    api.createManagedPages(async ({ createPage }) => {
+      const { data } = await axios.get('https://borealbirds.github.io/api/v4/species')
+        
+      data.data.forEach(item => {
+        createPage({
+          path: `/species/${item.id}`,
+          component: './src/templates/Species.vue',
+          context: {
+            id: item.id,
+            english: item.english,
+            scientific: item.scientific
+          }
+        })
+      })
+    })    
+    
   })
 
   api.beforeBuild(({ config, store }) => {
