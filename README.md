@@ -42,3 +42,9 @@ A simple portfolio starter theme for Gridsome
     - [Gridsome Starter Blog](https://github.com/gridsome/gridsome-starter-blog)
     - [Gridsome Starter Bleda](https://github.com/cossssmin/gridsome-starter-bleda)
     - [Jigsaw Starter Blog](https://jigsaw.tighten.co/docs/starter-templates/) - I got a lot of design inspiration from this starter theme.
+
+## Todo
+
+- finish api
+- try updating search in server.js
+- if fail: use spp data to write static/search.json
