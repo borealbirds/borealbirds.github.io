@@ -49,14 +49,16 @@ module.exports = function (api, options) {
     api.createManagedPages(async ({ createPage }) => {
       const { data } = await axios.get('https://borealbirds.github.io/api/v4/species')
         
-      data.data.forEach(item => {
+      data.forEach(item => {
         createPage({
           path: `/species/${item.id}`,
           component: './src/templates/Species.vue',
           context: {
             id: item.id,
             english: item.english,
-            scientific: item.scientific
+            scientific: item.scientific,
+            french: item.french,
+            family: item.family
           }
         })
       })

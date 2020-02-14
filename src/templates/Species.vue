@@ -1,78 +1,67 @@
 <template>
   <Layout>
+
     <div class="container-inner mx-auto py-4">
       <div v-html="$context.id" ref="sppid" hidden></div>
-      <h2 class="text-4xl font-bold">{{ $context.scientific }}</h2>
-      <div class="text-copy-secondary mb-4">Subheading</div>
-
-          <div class="">
-            <img :src="mapurl" alt="Density map" class="object-cover w-screen">
-          </div>
-
-    <table class="table-auto">
-      <thead>
-        <tr>
-          <th class="px-4 py-2">BCR Name</th>
-          <th class="px-4 py-2">Abundance</th>
-          <th class="px-4 py-2">Density (males/ha)</th>
-          <th class="px-4 py-2">Area (km<sup>2</sup>)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in popsize">
-          <td class="border px-4 py-2">{{ item.region }}</td>
-          <td class="border px-4 py-2 text-right">{{ item.abundance.estimate + ' (' + item.abundance.lower + ' &#177; ' + item.abundance.upper + ')' }}</td>
-          <td class="border px-4 py-2 text-right">{{ item.density.estimate + ' (' + item.density.lower + ' &#177; ' + item.density.upper + ')' }}</td>
-          <td class="border px-4 py-2 text-right">{{ item.areakmsq }}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- <div>{{ data }}</div> -->
+      <h2 class="text-4xl font-bold">{{ $context.english }}</h2>
+      <div class="text-2xl text-copy-secondary mb-4">
+        <span v-html="$context.french"></span>
+        <span> &middot; </span>
+        <span><em>{{ $context.scientific }}</em></span>
+        <span> &middot; </span>
+        <span>Family {{ $context.family }}</span>
+      </div>
     </div>
+
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pt-4">
+      <img :src="showdet ? mapurl.det : mapurl.pred" :alt="`Density map of ${$context.english}`" class="">
+    </div>
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
+      Density map of {{ $context.english }} <span></span> 
+      <a class="font-normal" href="#" @click="showdet = !showdet">Toggle detections</a>
+    </div>
+
+    <div class="container-inner mx-auto py-4">
+      <h2 class="text-3xl font-bold">Population size</h2>
+      <table class="table-fixed">
+        <thead>
+          <tr>
+            <th class="w-4/12 px-4 py-2">Region</th>
+            <th class="w-3/12 px-4 py-2">Abundance<br/>(M males)</th>
+            <th class="w-3/12 px-4 py-2">Density<br/>(males/ha)</th>
+            <th class="w-2/12 px-4 py-2">Area<br/>(M km<sup>2</sup>)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in popsize" class="bg-background-secondary hover:bg-background-tertiary">
+            <td class="border px-4 py-2">{{ item.region }}</td>
+            <td class="border px-4 py-2 text-right">{{ item.abundance.estimate }}<br/>{{'(' + item.abundance.lower + ' &#177; ' + item.abundance.upper + ')' }}</td>
+            <td class="border px-4 py-2 text-right">{{ item.density.estimate }}<br/>{{'(' + item.density.lower + ' &#177; ' + item.density.upper + ')' }}</td>
+            <td class="border px-4 py-2 text-right">{{ item.areakmsq }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container-inner mx-auto py-4">
+      <h2 class="text-3xl font-bold">Land cover associations</h2>
+    </div>
+
   </Layout>
 </template>
 <script>
 const axios = require('axios')
 
-const mapurl = 'https://borealbirds.github.io/api/v4/species/ALFL/map.png'
-const popsize = [
-  {
-    region: 'BCR 5',
-    abundance: {
-      estimate: 101,
-      lower: 81,
-      upper: 131
-    },
-    density: {
-      estimate: 10.1,
-      lower: 8,
-      upper: 13
-    },
-    areakmsq: 100
-  },
-  {
-    region: 'BCR 6',
-    abundance: {
-      estimate: 10,
-      lower: 8,
-      upper: 13
-    },
-    density: {
-      estimate: 1.0,
-      lower: 0.8,
-      upper: 1.3
-    },
-    areakmsq: 10
-  }
-]
-
 export default {
   data: function () {
     return {
-      data: null,
-      mapurl: mapurl,
-      popsize: popsize,
+      // data: null,
+      showdet: false,
+      mapurl: {
+        pred: '',
+        det: ''
+      },
+      popsize: [],
       densplot: {}
     }
   },
@@ -82,9 +71,11 @@ export default {
     axios
       .get(`https://borealbirds.github.io/api/v4/species/${id}`)
       .then(response => {
-        this.data = response.data
+        // this.data = response.data
+        this.popsize = response.data.popsize
+        this.mapurl.pred = `https://borealbirds.github.io/api/v4/species/${id}/images/mean-pred.png`
+        this.mapurl.det = `https://borealbirds.github.io/api/v4/species/${id}/images/mean-det.png`
         console.log("Success")
-        // add here all the data manip for plots etc
       })
   }
 }
