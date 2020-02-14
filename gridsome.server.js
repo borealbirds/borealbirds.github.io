@@ -68,6 +68,7 @@ module.exports = function (api, options) {
     
   })
 
+  /*
   api.beforeBuild(({ config, store }) => {
 
     // Generate an index file for Fuse to search Posts
@@ -96,4 +97,5 @@ module.exports = function (api, options) {
       fs.writeFileSync(path.resolve(process.cwd(), output.dir, fileName), JSON.stringify(posts))
     }
   })
+  */
 }

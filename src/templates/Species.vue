@@ -29,6 +29,20 @@
     </div>
 
     <div class="container-inner mx-auto py-4">
+      <h2 class="text-3xl font-bold">Land cover associations</h2>
+    </div>
+    <div class="container-inner mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
+      <ul class="flex">
+        <li class="mr-1" v-for="bcr in bcrlist">
+          <a class="bg-white inline-block py-2 px-2" href="#" @click="updatePlot(bcr)">{{ bcr }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container-inner mx-auto pb-4">
+      <Plotly :data="densplot" :layout="layout" :display-mode-bar="false"></Plotly>
+    </div>
+
+    <div class="container-inner mx-auto py-4">
       <h2 class="text-3xl font-bold">Population size</h2>
       <table class="table-fixed">
         <thead>
@@ -48,23 +62,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-
-    <div class="container-inner mx-auto py-4">
-      <h2 class="text-3xl font-bold">Land cover associations</h2>
-    </div>
-
-
-
-    <div class="container-inner mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
-      <ul class="flex">
-        <li class="mr-1" v-for="bcr in bcrlist">
-          <a class="bg-white inline-block py-2 px-2" href="#" @click="updatePlot(bcr)">{{ bcr }}</a>
-        </li>
-      </ul>
-    </div>
-    <div class="container-inner mx-auto pb-4">
-      <Plotly :data="densplot" :layout="layout" :display-mode-bar="false"></Plotly>
     </div>
 
   </Layout>
@@ -107,6 +104,12 @@ export default {
       this.title = (bcrid === 'Canada') ? bcrid : 'BCR ' + bcrid
       console.log('LCC plot updated to BCR ' + x[0].region)
     }
+  },
+  metaInfo: {
+    title: 'Results',
+    meta: [
+      { name: 'charset', content: 'utf-8' }
+    ]
   },
   data: function () {
     return {
