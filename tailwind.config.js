@@ -100,6 +100,7 @@ module.exports = {
   },
   variants: {
     // Some useful comment
+    tableLayout: ['responsive', 'hover', 'focus']
   },
   plugins: [
     // Some useful comment
