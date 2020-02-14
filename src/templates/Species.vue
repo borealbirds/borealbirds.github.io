@@ -47,35 +47,111 @@
       <h2 class="text-3xl font-bold">Land cover associations</h2>
     </div>
 
+
+
+    <div class="container-inner mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
+      <ul class="flex">
+        <li class="mr-1" v-for="bcr in bcrlist">
+          <a class="bg-white inline-block py-2 px-2" href="#" @click="updatePlot(bcr)">{{ bcr }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container-inner mx-auto pb-4">
+      <Plotly :data="densplot" :layout="layout" :display-mode-bar="false"></Plotly>
+    </div>
+
   </Layout>
 </template>
 <script>
 const axios = require('axios')
+import { Plotly } from 'vue-plotly'
 
 export default {
+  components: {
+    Plotly
+  },
+  computed: {
+    layout: function () {
+      return {
+        title: this.title,
+        yaxis: {
+          automargin: true
+        },
+        xaxis: { 
+          zeroline: false,
+          title: { 
+            text: 'Density (males/ha)'
+          } 
+        }
+      }
+    }
+  },
+  methods: {
+    updatePlot: function (bcrid) {
+      const x = this.lcassoc.filter(val => val.region === bcrid)
+      this.densplot[0].y = x[0].data.landcover
+      this.densplot[0].x = x[0].data.estimate
+      var a = x[0].data.estimate
+      a = a.map((a, i) => x[0].data.upper[i] - a)
+      var b = x[0].data.estimate
+      b = b.map((b, i) => b - x[0].data.lower[i])
+      this.densplot[0].error_x.array = a
+      this.densplot[0].error_x.arrayminus = b
+      this.title = (bcrid === 'Canada') ? bcrid : 'BCR ' + bcrid
+      console.log('LCC plot updated to BCR ' + x[0].region)
+    }
+  },
   data: function () {
     return {
-      // data: null,
+      title: '',
       showdet: false,
       mapurl: {
         pred: '',
         det: ''
       },
       popsize: [],
-      densplot: {}
+      lcassoc: [],
+      bcrlist: [],
+      densplot: [
+        {
+          y: [], // ['Trial 1', 'Trial 2', 'Trial 3'],
+          x: [], // [3, 6, 4],
+          orientation: 'h',
+          marker: {color: '#007a7c'},
+          error_x: {
+            type: 'data',
+            symmetric: false,
+            array: [], // [1, 0.5, 1.5],
+            arrayminus: [], // [0.5, 0.25, 0.75],
+            visible: true
+          },
+          type: 'bar'
+        }
+      ]
     }
   },
   mounted: function () {
     const id = this.$refs.sppid.innerText
-    console.log("Getting data for " + id)
+    console.log('Getting data for species ' + id)
     axios
       .get(`https://borealbirds.github.io/api/v4/species/${id}`)
       .then(response => {
         // this.data = response.data
-        this.popsize = response.data.popsize
         this.mapurl.pred = `https://borealbirds.github.io/api/v4/species/${id}/images/mean-pred.png`
         this.mapurl.det = `https://borealbirds.github.io/api/v4/species/${id}/images/mean-det.png`
-        console.log("Success")
+        this.popsize = response.data.popsize
+        this.lcassoc = response.data.densplot
+        this.densplot[0].y = response.data.densplot[0].data.landcover
+        this.densplot[0].x = response.data.densplot[0].data.estimate
+        var a = response.data.densplot[0].data.estimate
+        a = a.map((a, i) => response.data.densplot[0].data.upper[i] - a)
+        var b = response.data.densplot[0].data.estimate
+        b = b.map((b, i) => b - response.data.densplot[0].data.lower[i])
+        this.densplot[0].error_x.array = a
+        this.densplot[0].error_x.arrayminus = b
+        this.bcrlist = response.data.densplot.map(val => val.region)
+        this.title = 'Canada'
+        console.log('Success')
       })
   }
 }
