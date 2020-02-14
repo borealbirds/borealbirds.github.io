@@ -58,7 +58,9 @@ module.exports = function (api, options) {
             english: item.english,
             scientific: item.scientific,
             french: item.french,
-            family: item.family
+            family: item.family,
+            idnext: item.idnext,
+            idprevious: item.idprevious
           }
         })
       })

@@ -1,8 +1,15 @@
 <template>
   <Layout>
+    
+    <div v-html="$context.id" ref="sppid" hidden></div>
+
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
+      <a class="font-normal" :href="`https://borealbirds.github.io/species/${$context.idprevious}`">Previous</a>
+      <span></span> 
+      <a class="font-normal" :href="`https://borealbirds.github.io/species/${$context.idnext}`">Next</a>
+    </div>
 
     <div class="container-inner mx-auto py-4">
-      <div v-html="$context.id" ref="sppid" hidden></div>
       <h2 class="text-4xl font-bold">{{ $context.english }}</h2>
       <div class="text-2xl text-copy-secondary mb-4">
         <span v-html="$context.french"></span>
