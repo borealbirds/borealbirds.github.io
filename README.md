@@ -49,3 +49,4 @@ A simple portfolio starter theme for Gridsome
 - fix plotly issue
 - under the map use show/remove instead of toggle
 - write deploy script (using temp folder to checkout master)
+- make video for landing page
