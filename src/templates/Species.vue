@@ -39,7 +39,6 @@
       </ul>
     </div>
     <div class="container-inner mx-auto pb-4">
-      <!-- <Plotly :data="densplot" :layout="layout" :display-mode-bar="false"></Plotly> -->
       <ClientOnly>
         <vue-plotly :data="densplot" :layout="layout" :options="options"/>
       </ClientOnly>
@@ -71,23 +70,11 @@
 </template>
 <script>
 const axios = require('axios')
-// import { Plotly } from 'vue-plotly'
 import VuePlotly from '@statnett/vue-plotly'
-// if (process.isClient) {
-//     const VuePlotly = require('@statnett/vue-plotly')
-// //    import VuePlotly from '@statnett/vue-plotly'
-// }
+
 export default {
-  // components: {
-  //   Plotly
-  // },
   components: {
     VuePlotly
-    // VuePlotly: () => {
-    //   import ('@statnett/vue-plotly')
-    //   .then(m => m.VuePlotly)
-    //   .catch()
-    // }
   },
   computed: {
     layout: function () {
@@ -159,8 +146,6 @@ export default {
     }
   },
   mounted: function () {
-    // window.VuePlotly = require('@statnett/vue-plotly')
-
     const id = this.$refs.sppid.innerText
     console.log('Getting data for species ' + id)
     axios
