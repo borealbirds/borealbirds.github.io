@@ -46,7 +46,7 @@ A simple portfolio starter theme for Gridsome
 ## Deploy
 
 ```
-cd ~/dev
+cd ~/repos
 mkdir _tmp
 cd _tmp
 git clone -b dev https://github.com/borealbirds/borealbirds.github.io.git dev
@@ -56,16 +56,19 @@ gridsome build
 cd ..
 git clone -b master https://github.com/borealbirds/borealbirds.github.io.git master
 cd master
+git rm -r *
 cp -r ../dev/dist/* ./
 git add --all *
 git commit -m "Update website"
 git push -q origin master
+cd ..
+#rm -rf _tmp
+cd ~/repos/borealbirds.github.io
 ```
 
 ## Todo
 
 - update images w det
-- fix plotly issue
+- fix plotly issue: try adding all the data to the page context? maybe then local require will be OK
 - under the map use show/remove instead of toggle
-- write deploy script (using temp folder to checkout master)
 - make video for landing page
