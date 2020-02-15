@@ -39,9 +39,10 @@
       </ul>
     </div>
     <div class="container-inner mx-auto pb-4">
-      <ClientOnly>
+      <!-- <ClientOnly>
         <vue-plotly :data="densplot" :layout="layout" :options="options"/>
-      </ClientOnly>
+      </ClientOnly> -->
+      <div id="plotly"></div>
     </div>
 
     <div class="container-inner mx-auto py-4">
@@ -70,12 +71,12 @@
 </template>
 <script>
 const axios = require('axios')
-import VuePlotly from '@statnett/vue-plotly'
+// import VuePlotly from '@statnett/vue-plotly'
 
 export default {
-  components: {
-    VuePlotly
-  },
+  // components: {
+  //   VuePlotly
+  // },
   computed: {
     layout: function () {
       return {
@@ -146,7 +147,9 @@ export default {
     }
   },
   mounted: function () {
+    // grab ref
     const id = this.$refs.sppid.innerText
+    // load data from api
     console.log('Getting data for species ' + id)
     axios
       .get(`https://borealbirds.github.io/api/v4/species/${id}`)
@@ -169,6 +172,17 @@ export default {
         console.log('Success')
       })
       .catch()
+      // inject plotly script
+      let plotlyScript = document.createElement('script')
+      plotlyScript.setAttribute('src', 'https://cdn.plot.ly/plotly-latest.min.js')
+      document.head.appendChild(plotlyScript)
+      // add plot
+      Plotly.newPlot(
+        'plotly',
+        this.densplot,
+        this.layout,
+        this.options
+      )
   }
 }
 </script>
