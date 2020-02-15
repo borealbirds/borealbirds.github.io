@@ -4,9 +4,9 @@
     <div v-html="$context.id" ref="sppid" hidden></div>
 
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
-      <a class="font-normal" :href="`https://borealbirds.github.io/species/${$context.idprevious}`">Previous</a>
+      <g-link  class="font-normal" :to="`/species/${$context.idprevious}`">Previous</g-link>
       <span></span> 
-      <a class="font-normal" :href="`https://borealbirds.github.io/species/${$context.idnext}`">Next</a>
+      <g-link class="font-normal" :to="`/species/${$context.idnext}`">Next</g-link>
     </div>
 
     <div class="container-inner mx-auto py-4">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pt-4">
-      <img :src="showdet ? mapurl.det : mapurl.pred" :alt="`Density map of ${$context.english}`" class="">
+      <g-image :src="showdet ? mapurl.det : mapurl.pred" :alt="`Density map of ${$context.english}`" />
     </div>
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
       Density map of {{ $context.english }} <span></span> 
