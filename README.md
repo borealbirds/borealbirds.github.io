@@ -43,6 +43,25 @@ A simple portfolio starter theme for Gridsome
     - [Gridsome Starter Bleda](https://github.com/cossssmin/gridsome-starter-bleda)
     - [Jigsaw Starter Blog](https://jigsaw.tighten.co/docs/starter-templates/) - I got a lot of design inspiration from this starter theme.
 
+## Deploy
+
+```
+cd ~/dev
+mkdir _tmp
+cd _tmp
+git clone -b dev https://github.com/borealbirds/borealbirds.github.io.git dev
+cd dev
+npm install
+gridsome build
+cd ..
+git clone -b master https://github.com/borealbirds/borealbirds.github.io.git master
+cd master
+cp -r ../dev/dist/* ./
+git add --all *
+git commit -m "Update website"
+git push -q origin master
+```
+
 ## Todo
 
 - update images w det
