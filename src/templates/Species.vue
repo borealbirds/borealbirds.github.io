@@ -39,7 +39,7 @@
       </ul>
     </div>
     <div class="container-inner mx-auto pb-4">
-      <Plotly :data="densplot" :layout="layout" :display-mode-bar="false"></Plotly>
+      <!-- <Plotly :data="densplot" :layout="layout" :display-mode-bar="false"></Plotly> -->
     </div>
 
     <div class="container-inner mx-auto py-4">
@@ -68,12 +68,12 @@
 </template>
 <script>
 const axios = require('axios')
-import { Plotly } from 'vue-plotly'
+// import { Plotly } from 'vue-plotly'
 
 export default {
-  components: {
-    Plotly
-  },
+  // components: {
+  //   Plotly
+  // },
   computed: {
     layout: function () {
       return {
