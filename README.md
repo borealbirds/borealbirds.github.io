@@ -45,6 +45,7 @@ A simple portfolio starter theme for Gridsome
 
 ## Todo
 
-- finish api
-- try updating search in server.js
-- if fail: use spp data to write static/search.json
+- update images w det
+- fix plotly issue
+- under the map use show/remove instead of toggle
+- write deploy script (using temp folder to checkout master)
