@@ -3,11 +3,11 @@
     
     <div v-html="$context.id" ref="sppid" hidden></div>
 
-    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
+    <!-- <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
       <g-link  class="font-normal" :to="`/species/${$context.idprevious}`">Previous</g-link>
       <span></span> 
       <g-link class="font-normal" :to="`/species/${$context.idnext}`">Next</g-link>
-    </div>
+    </div> -->
 
     <div class="container-inner mx-auto py-4">
       <h2 class="text-4xl font-bold">{{ $context.english }}</h2>
@@ -25,7 +25,7 @@
     </div>
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
       Density map of {{ $context.english }} <span></span> 
-      <a class="font-normal" href="#" @click="showdet = !showdet">Toggle detections</a>
+      <a class="font-normal" href="#" @click="showdet = !showdet">{{ showdet ? 'Hide' : 'Show' }} detections</a>
     </div>
 
     <div class="container-inner mx-auto py-4">
@@ -39,10 +39,10 @@
       </ul>
     </div>
     <div class="container-inner mx-auto pb-4">
-      <!-- <ClientOnly>
+      <ClientOnly>
         <vue-plotly :data="densplot" :layout="layout" :options="options"/>
-      </ClientOnly> -->
-      <div id="plotly"></div>
+      </ClientOnly>
+      <!-- <div id="plotly"></div> -->
     </div>
 
     <div class="container-inner mx-auto py-4">
@@ -67,16 +67,38 @@
       </table>
     </div>
 
+    <div class="container-inner mx-auto py-4">
+      <h2 class="text-3xl font-bold">Data accessibility</h2>
+      <ul>
+        <li>
+          Download <a class="font-normal" href="https://drive.google.com/drive/folders/1exWa6vfhGo1DNUL4ei2baDz77as7jYzY?usp=sharing" target=_blank>average density</a> raster layers in GeoTIFF format.
+        </li>
+        <li>
+          Download <a class="font-normal" href="https://drive.google.com/drive/folders/1JAmm1vEibvQTyNATXVWTRFk4Lm-u5iy_?usp=sharing" target=_blank>population size and density estimates</a> in text (CSV) format.
+        </li>
+        <li>
+          Access the population size and density estimates via the <a class="font-normal" href="https://borealbirds.github.io/api/" target=_blank>JSON API</a> API.
+        </li>
+      </ul>
+    </div>
+
+    <div class="container-inner mx-auto py-4">
+      <h2 class="text-3xl font-bold">Citing these results</h2>
+
+      Boreal Avian Modelling Project, 2020. Boreal density estimates for {{ $context.english }} (<em>{{ $context.scientific }}</em>). 
+      BAM density models v4.0. Available at <a class="font-normal" :href="`https://borealbirds.github.io/species/${$context.id}`" target=_blank>https://borealbirds.github.io/species/{{ $context.id }}</a>.
+    </div>
+
   </Layout>
 </template>
 <script>
 const axios = require('axios')
-// import VuePlotly from '@statnett/vue-plotly'
+import VuePlotly from '@statnett/vue-plotly'
 
 export default {
-  // components: {
-  //   VuePlotly
-  // },
+  components: {
+    VuePlotly
+  },
   computed: {
     layout: function () {
       return {
@@ -116,7 +138,8 @@ export default {
   },
   data: function () {
     return {
-      title: '',
+      title: 'Canada',
+      sppid: '',
       showdet: false,
       mapurl: {
         pred: '',
@@ -149,6 +172,7 @@ export default {
   mounted: function () {
     // grab ref
     const id = this.$refs.sppid.innerText
+    this.sppid = id
     // load data from api
     console.log('Getting data for species ' + id)
     axios
@@ -168,21 +192,20 @@ export default {
         this.densplot[0].error_x.array = a
         this.densplot[0].error_x.arrayminus = b
         this.bcrlist = response.data.densplot.map(val => val.region)
-        this.title = 'Canada'
         console.log('Success')
       })
       .catch()
       // inject plotly script
-      let plotlyScript = document.createElement('script')
-      plotlyScript.setAttribute('src', 'https://cdn.plot.ly/plotly-latest.min.js')
-      document.head.appendChild(plotlyScript)
+      // let plotlyScript = document.createElement('script')
+      // plotlyScript.setAttribute('src', 'https://cdn.plot.ly/plotly-latest.min.js')
+      // document.head.appendChild(plotlyScript)
       // add plot
-      Plotly.newPlot(
-        'plotly',
-        this.densplot,
-        this.layout,
-        this.options
-      )
+      // Plotly.newPlot(
+      //   'plotly',
+      //   this.densplot,
+      //   this.layout,
+      //   this.options
+      // )
   }
 }
 </script>
