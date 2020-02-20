@@ -11,8 +11,10 @@ cd master
 git rm -r *
 cp -r ../dev/dist/* ./
 git add --all *
-git commit -m "Update website"
+export REV=$(git rev-list --count HEAD)
+git commit -m "Update website ${REV}"
 git push -q origin master
 cd ..
 rm -rf _tmp
 cd borealbirds.github.io
+
