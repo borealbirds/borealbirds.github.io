@@ -71,7 +71,8 @@
           Download <a class="font-normal" href="https://drive.google.com/drive/folders/1exWa6vfhGo1DNUL4ei2baDz77as7jYzY?usp=sharing" target=_blank>average density</a> raster layers in GeoTIFF format.
         </li>
         <li>
-          Download <a class="font-normal" href="https://drive.google.com/drive/folders/1JAmm1vEibvQTyNATXVWTRFk4Lm-u5iy_?usp=sharing" target=_blank>population size and density estimates</a> in text (CSV) format.
+          Download <a class="font-normal" :href="`https://borealbirds.github.io/api/v4/BAMv4-abundances-${version}.csv`" target=_blank>population size</a> and 
+          <a class="font-normal" :href="`https://borealbirds.github.io/api/v4/BAMv4-densities-${version}.csv`" target=_blank>density estimates</a> in text (CSV) format.
         </li>
         <li>
           Access the population size and density estimates via the <a class="font-normal" href="https://borealbirds.github.io/api/" target=_blank>JSON API</a> API.
@@ -91,22 +92,6 @@
 <script>
 const axios = require('axios')
 export default {
-  computed: {
-    layout: function () {
-      return {
-        title: this.title,
-        yaxis: {
-          automargin: true
-        },
-        xaxis: { 
-          zeroline: false,
-          title: { 
-            text: 'Density (males/ha)'
-          } 
-        }
-      }
-    }
-  },
   methods: {
     updateFig: function (bcrid) {
       this.title = (bcrid === 'Canada') ? bcrid : 'BCR ' + bcrid
@@ -123,6 +108,7 @@ export default {
   data: function () {
     return {
       title: 'Canada',
+      version: '2020-02-20',
       sppid: '',
       showdet: false,
       figurl: '',

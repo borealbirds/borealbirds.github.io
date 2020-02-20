@@ -66,18 +66,3 @@ cd ..
 cd ~/repos/borealbirds.github.io
 ```
 
-## Todo
-
-- update images w det
-- fix plotly issue: try adding all the data to the page context? maybe then local require will be OK
-- under the map use show/remove instead of toggle
-- make video for landing page
-- need to make species ID reactive by exposing via data
-
-D3 links
-Horizontal barchart https://bl.ocks.org/alandunning/7008d0332cc28a826b37b3cf6e7bd998
-Resize svg https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/
-Error bar https://bl.ocks.org/NGuernse/8dc8b9e96de6bedcb6ad2c5467f5ef9a
-https://qiita.com/ku0522a/items/19934339c69037171b31
-
-
