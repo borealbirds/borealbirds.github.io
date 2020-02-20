@@ -34,15 +34,12 @@
     <div class="container-inner mx-auto flex flex-col lg:flex-row items-center justify-between pb-4">
       <ul class="flex">
         <li class="mr-1" v-for="bcr in bcrlist">
-          <a class="bg-white inline-block py-2 px-2" href="#" @click="updatePlot(bcr)">{{ bcr }}</a>
+          <a class="bg-white inline-block py-2 px-2" href="#" @click="updateFig(bcr)">{{ bcr }}</a>
         </li>
       </ul>
     </div>
     <div class="container-inner mx-auto pb-4">
-      <ClientOnly>
-        <vue-plotly :data="densplot" :layout="layout" :options="options"/>
-      </ClientOnly>
-      <!-- <div id="plotly"></div> -->
+      <g-image :src="figurl" :alt="`Density by lancover for ${$context.english}`" />
     </div>
 
     <div class="container-inner mx-auto py-4">
@@ -93,12 +90,7 @@
 </template>
 <script>
 const axios = require('axios')
-import VuePlotly from '@statnett/vue-plotly'
-
 export default {
-  components: {
-    VuePlotly
-  },
   computed: {
     layout: function () {
       return {
@@ -116,18 +108,10 @@ export default {
     }
   },
   methods: {
-    updatePlot: function (bcrid) {
-      const x = this.lcassoc.filter(val => val.region === bcrid)
-      this.densplot[0].y = x[0].data.landcover
-      this.densplot[0].x = x[0].data.estimate
-      var a = x[0].data.estimate
-      a = a.map((a, i) => x[0].data.upper[i] - a)
-      var b = x[0].data.estimate
-      b = b.map((b, i) => b - x[0].data.lower[i])
-      this.densplot[0].error_x.array = a
-      this.densplot[0].error_x.arrayminus = b
+    updateFig: function (bcrid) {
       this.title = (bcrid === 'Canada') ? bcrid : 'BCR ' + bcrid
-      console.log('LCC plot updated to BCR ' + x[0].region)
+      const reg = (bcrid === 'Canada') ? 'can' : bcrid
+      this.figurl = `https://borealbirds.github.io/api/v4/species/${this.sppid}/images/dbylc-${reg}.svg`
     }
   },
   metaInfo: {
@@ -141,32 +125,14 @@ export default {
       title: 'Canada',
       sppid: '',
       showdet: false,
+      figurl: '',
       mapurl: {
         pred: '',
         det: ''
       },
       popsize: [],
       lcassoc: [],
-      bcrlist: [],
-      options: {
-        displayModeBar: false
-      },
-      densplot: [
-        {
-          y: [], // ['Trial 1', 'Trial 2', 'Trial 3'],
-          x: [], // [3, 6, 4],
-          orientation: 'h',
-          marker: {color: '#007a7c'},
-          error_x: {
-            type: 'data',
-            symmetric: false,
-            array: [], // [1, 0.5, 1.5],
-            arrayminus: [], // [0.5, 0.25, 0.75],
-            visible: true
-          },
-          type: 'bar'
-        }
-      ]
+      bcrlist: []
     }
   },
   mounted: function () {
@@ -181,31 +147,13 @@ export default {
         // this.data = response.data
         this.mapurl.pred = `https://borealbirds.github.io/api/v4/species/${id}/images/mean-pred.png`
         this.mapurl.det = `https://borealbirds.github.io/api/v4/species/${id}/images/mean-det.png`
+        this.figurl = `https://borealbirds.github.io/api/v4/species/${id}/images/dbylc-can.svg`
         this.popsize = response.data.popsize
         this.lcassoc = response.data.densplot
-        this.densplot[0].y = response.data.densplot[0].data.landcover
-        this.densplot[0].x = response.data.densplot[0].data.estimate
-        var a = response.data.densplot[0].data.estimate
-        a = a.map((a, i) => response.data.densplot[0].data.upper[i] - a)
-        var b = response.data.densplot[0].data.estimate
-        b = b.map((b, i) => b - response.data.densplot[0].data.lower[i])
-        this.densplot[0].error_x.array = a
-        this.densplot[0].error_x.arrayminus = b
         this.bcrlist = response.data.densplot.map(val => val.region)
         console.log('Success')
       })
       .catch()
-      // inject plotly script
-      // let plotlyScript = document.createElement('script')
-      // plotlyScript.setAttribute('src', 'https://cdn.plot.ly/plotly-latest.min.js')
-      // document.head.appendChild(plotlyScript)
-      // add plot
-      // Plotly.newPlot(
-      //   'plotly',
-      //   this.densplot,
-      //   this.layout,
-      //   this.options
-      // )
   }
 }
 </script>
