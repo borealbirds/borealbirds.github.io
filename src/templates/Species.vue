@@ -87,6 +87,11 @@
       BAM density models v4.0. Available at <a class="font-normal" :href="`https://borealbirds.github.io/species/${$context.id}`" target=_blank>https://borealbirds.github.io/species/{{ $context.id }}</a>.
     </div>
 
+
+    <div class="container-inner mx-auto py-4">
+      <vue-disqus shortname="borealbirds" :identifier="$context.id" :title="$context.english"></vue-disqus>
+    </div>
+
   </Layout>
 </template>
 <script>
