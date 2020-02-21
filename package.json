@@ -1,5 +1,5 @@
 {
-  "name": "Peter Solymos",
+  "name": "bam--model-website",
   "private": true,
   "scripts": {
     "build": "gridsome build",
