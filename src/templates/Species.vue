@@ -75,7 +75,7 @@
           <a class="font-normal" :href="`https://borealbirds.github.io/api/v4/BAMv4-densities-${version}.csv`" target=_blank>density estimates</a> in text (CSV) format.
         </li>
         <li>
-          Access the population size and density estimates via the <a class="font-normal" href="https://borealbirds.github.io/api/" target=_blank>JSON API</a> API.
+          Access the population size and density estimates via the <a class="font-normal" href="https://borealbirds.github.io/api/" target=_blank>JSON API</a>.
         </li>
       </ul>
     </div>
