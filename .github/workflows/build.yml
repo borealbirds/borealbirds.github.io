@@ -1,0 +1,22 @@
+name: Build & Deploy
+on:
+  push:	
+    branches:	
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Installing packages
+        run: npm install
+      - name: Build Site
+        run: gridsome build
+      - name: Deploy Site
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: dev
+          BRANCH: master
+          FOLDER: dist
