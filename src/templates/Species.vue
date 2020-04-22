@@ -20,6 +20,18 @@
       </div>
     </div>
 
+    <div class="container-inner mx-auto py-4">
+      <strong>DISCLAIMER</strong> &mdash; Maps and population/density estimates are based on conditions in the year 2011. 
+      These results are preliminary and have not yet undergone peer review. Future changes to 
+      model structure and covariates may result in different spatial prediction patterns but 
+      should not substantially change population estimates or habitat-based mean density estimates. 
+      With future incorporation of additional avian data, the precision and accuracy of the estimates will improve. 
+      Please contact <a href="mailto:solymos@ualberta.ca?subject=BAM Species Website">solymos@ualberta.ca</a> 
+      with questions about appropriate uses of these results and associated data products.
+    </div>
+
+
+
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pt-4">
       <g-image :src="showdet ? mapurl.det : mapurl.pred" :alt="`Density map of ${$context.english}`" />
     </div>
