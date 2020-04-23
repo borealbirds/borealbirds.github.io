@@ -68,8 +68,8 @@
         <tbody>
           <tr v-for="item in popsize" class="bg-background-secondary hover:bg-background-tertiary">
             <td class="border px-4 py-2">{{ item.region }}</td>
-            <td class="border px-4 py-2 text-right">{{ item.abundance.estimate }}<br/>{{'(' + item.abundance.lower + ' &#177; ' + item.abundance.upper + ')' }}</td>
-            <td class="border px-4 py-2 text-right">{{ item.density.estimate }}<br/>{{'(' + item.density.lower + ' &#177; ' + item.density.upper + ')' }}</td>
+            <td class="border px-4 py-2 text-right">{{ item.abundance.estimate }}<br/>{{'(' + item.abundance.lower + ' &mdash; ' + item.abundance.upper + ')' }}</td>
+            <td class="border px-4 py-2 text-right">{{ item.density.estimate }}<br/>{{'(' + item.density.lower + ' &mdash; ' + item.density.upper + ')' }}</td>
             <td class="border px-4 py-2 text-right">{{ item.areakmsq }}</td>
           </tr>
         </tbody>
