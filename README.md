@@ -1,6 +1,6 @@
 # BAM Model Results Website
 
-Go to [website](https://borealbirds.github.io/) to view the glorious results
+Go to [website](https://borealbirds.github.io/) to view the glorious results!
 
 ## Features
 
