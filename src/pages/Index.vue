@@ -22,7 +22,7 @@
           <p class="text-white text-xl md:text-2xl leading-snug mt-4 mb-8">
             Population sizes, habitat associations, and distributions for status assessment, regional planning, conservation prioritization, and recovery of species at risk
           </p>
-          <g-link to="/species/">
+          <g-link to="/species">
             <button class="bg-green-700 hover:bg-green-500 text-white text-xl font-bold py-2 px-4 rounded-full mb-12">
               Browse results by species
             </button>
@@ -38,7 +38,7 @@
           <p class="mb-4">
             We developed a generalized analytical approach to model species density in relation to environmental covariates, using the Boreal Avian Modelling Project database of point-count surveys.
           </p>
-          <g-link to="/methods/">
+          <g-link to="/methods">
             <button class="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full mb-12">
               Learn more about our methods
             </button>
