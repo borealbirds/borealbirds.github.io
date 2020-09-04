@@ -128,21 +128,21 @@
         Data availability
       </h2>
       <ul>
-        <li>
+        <li class="mb-4">
           Download <a
             class="font-normal"
             href="https://drive.google.com/drive/folders/1exWa6vfhGo1DNUL4ei2baDz77as7jYzY?usp=sharing"
             target=_blank
           >average density</a> raster layers in GeoTIFF format.
         </li>
-        <li>
+        <li class="mb-4">
           Download <a
             class="font-normal"
             href="https://borealbirds.github.io/api/v4/BAMv4-results-2020-02-20.xlsx"
             target=_blank
           >results</a> in text Excel (xlsx) format. Sheets contain abundance and density estimates and also the list of species, variables, variable importance and validation matrics.
         </li>
-        <li>
+        <li class="mb-4">
           Access the population size and density estimates via the <a
             class="font-normal"
             href="https://borealbirds.github.io/api/"

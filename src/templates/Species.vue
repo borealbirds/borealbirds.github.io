@@ -13,6 +13,7 @@
       <g-link class="font-normal" :to="`/species/${$context.idnext}`">Next</g-link>
     </div> -->
 
+    <!-- title -->
     <div class="container-inner mx-auto py-4">
       <h2 class="text-4xl font-bold">{{ $context.english }}</h2>
       <div class="text-2xl text-copy-secondary mb-4">
@@ -24,6 +25,7 @@
       </div>
     </div>
 
+    <!-- disclaimer -->
     <!-- <div class="container-inner mx-auto py-4">
       <strong>DISCLAIMER</strong> &mdash; Maps and population/density estimates are based on conditions in the year 2011.
       These results are preliminary and have not yet undergone peer review. Future changes to
@@ -34,6 +36,7 @@
       with questions about appropriate uses of these results and associated data products.
     </div> -->
 
+    <!-- map -->
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pt-4">
       <g-image
         :src="showdet ? mapurl.det : mapurl.pred"
@@ -49,6 +52,7 @@
       >{{ showdet ? 'Hide' : 'Show' }} detections</a>
     </div>
 
+    <!-- land cover density -->
     <div class="container-inner mx-auto py-4">
       <h2 class="text-3xl font-bold">Land cover associations</h2>
       Density (males/ha) across Canada and in Bird Conservation Regions within Canada (see <a href="/methods">Methods</a>)
@@ -74,6 +78,7 @@
       />
     </div>
 
+    <!-- table -->
     <div class="container-inner mx-auto py-4">
       <h2 class="text-3xl font-bold">Population size</h2>
       Population size (million males) is based on summing up predictive maps by regions (intervals in parentheses reflect the 5th and 95th percentile of the bootstrap distribution; see <a href="/methods">Methods</a>)
@@ -100,24 +105,25 @@
       </table>
     </div>
 
+    <!-- info -->
     <div class="container-inner mx-auto py-4">
       <h2 class="text-3xl font-bold">Data accessibility</h2>
       <ul>
-        <li>
+        <li class="mb-4">
           Download <a
             class="font-normal"
             href="https://drive.google.com/drive/folders/1exWa6vfhGo1DNUL4ei2baDz77as7jYzY?usp=sharing"
             target=_blank
           >average density</a> raster layers in GeoTIFF format.
         </li>
-        <li>
+        <li class="mb-4">
           Download <a
             class="font-normal"
             href="https://borealbirds.github.io/api/v4/BAMv4-results-2020-02-20.xlsx"
             target=_blank
           >results</a> in text Excel (xlsx) format. Sheets contain abundance and density estimates and also the list of species, variables, variable importance and validation matrics.
         </li>
-        <li>
+        <li class="mb-4">
           Access the population size and density estimates via the <a
             class="font-normal"
             href="https://borealbirds.github.io/api/"
