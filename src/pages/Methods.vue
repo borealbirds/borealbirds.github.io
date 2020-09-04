@@ -173,11 +173,6 @@ export default {
     meta: [
       { name: 'charset', content: 'utf-8' }
     ]
-  },
-  data: function () {
-    return {
-      x: ""
-    }
   }
 }
 </script>
