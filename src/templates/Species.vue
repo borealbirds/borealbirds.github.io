@@ -76,7 +76,7 @@
 
     <div class="container-inner mx-auto py-4">
       <h2 class="text-3xl font-bold">Population size</h2>
-      Population size (million males) is based on summing up predictive maps by regions (see <a href="/methods">Methods</a>)
+      Population size (million males) is based on summing up predictive maps by regions (intervals in parentheses reflect the 5th and 95th percentile of the bootstrap distribution; see <a href="/methods">Methods</a>)
       <table class="table-fixed">
         <thead>
           <tr>
