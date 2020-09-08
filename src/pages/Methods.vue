@@ -140,7 +140,7 @@
             class="font-normal"
             href="https://borealbirds.github.io/api/v4/BAMv4-results-2020-02-20.xlsx"
             target=_blank
-          >results</a> in text Excel (xlsx) format. Sheets contain abundance and density estimates and also the list of species, variables, variable importance and validation metrics.
+          >results</a> in Excel (xlsx) format. Sheets contain abundance and density estimates and also the list of species, variables, variable importance and validation metrics.
         </li>
         <li class="mb-4">
           Access the population size and density estimates via the <a
@@ -155,11 +155,15 @@
       </h2>
       <p class="mb-4">
         Boreal Avian Modelling Project, 2020.
-        National density models v4.0. Available at <a
+        BAM Generalized National Models Documentation, Version 4.0. Available at <a
           class="font-normal"
           href="https://borealbirds.github.io/"
           target=_blank
-        >https://borealbirds.github.io/</a>.
+        >https://borealbirds.github.io/</a>. DOI: <a
+          class="font-normal"
+          href="https://dx.doi.org/10.5281/zenodo.4018336"
+          target=_blank
+        >10.5281/zenodo.4018336</a>.
       </p>
 
     </div>
