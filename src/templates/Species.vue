@@ -143,9 +143,9 @@
         target=_blank
       >https://borealbirds.github.io/</a>. DOI: <a
         class="font-normal"
-        href="https://dx.doi.org/10.5281/zenodo.4018336"
+        href="https://dx.doi.org/10.5281/zenodo.4018335"
         target=_blank
-      >10.5281/zenodo.4018336</a>.
+      >10.5281/zenodo.4018335</a>.
       [Results for {{ $context.english }} (<em>{{ $context.scientific }}</em>)]
     </div>
 
