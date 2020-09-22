@@ -1,0 +1,717 @@
+[
+  {
+    "title": "Alder Flycatcher",
+    "path": "/species/ALFL",
+    "summary": "Empidonax alnorum"
+  },
+  {
+    "title": "American Crow",
+    "path": "/species/AMCR",
+    "summary": "Corvus brachyrhynchos"
+  },
+  {
+    "title": "American Goldfinch",
+    "path": "/species/AMGO",
+    "summary": "Spinus tristis"
+  },
+  {
+    "title": "American Pipit",
+    "path": "/species/AMPI",
+    "summary": "Anthus rubescens"
+  },
+  {
+    "title": "American Redstart",
+    "path": "/species/AMRE",
+    "summary": "Setophaga ruticilla"
+  },
+  {
+    "title": "American Robin",
+    "path": "/species/AMRO",
+    "summary": "Turdus migratorius"
+  },
+  {
+    "title": "American Tree Sparrow",
+    "path": "/species/ATSP",
+    "summary": "Spizella arborea"
+  },
+  {
+    "title": "American Three-toed Woodpecker",
+    "path": "/species/ATTW",
+    "summary": "Picoides dorsalis"
+  },
+  {
+    "title": "Bank Swallow",
+    "path": "/species/BANS",
+    "summary": "Riparia riparia"
+  },
+  {
+    "title": "Baltimore Oriole",
+    "path": "/species/BAOR",
+    "summary": "Icterus galbula"
+  },
+  {
+    "title": "Barn Swallow",
+    "path": "/species/BARS",
+    "summary": "Hirundo rustica"
+  },
+  {
+    "title": "Black-and-white Warbler",
+    "path": "/species/BAWW",
+    "summary": "Mniotilta varia"
+  },
+  {
+    "title": "Black-billed Cuckoo",
+    "path": "/species/BBCU",
+    "summary": "Coccyzus erythropthalmus"
+  },
+  {
+    "title": "Black-billed Magpie",
+    "path": "/species/BBMA",
+    "summary": "Pica hudsonia"
+  },
+  {
+    "title": "Bay-breasted Warbler",
+    "path": "/species/BBWA",
+    "summary": "Setophaga castanea"
+  },
+  {
+    "title": "Black-backed Woodpecker",
+    "path": "/species/BBWO",
+    "summary": "Picoides arcticus"
+  },
+  {
+    "title": "Black-capped Chickadee",
+    "path": "/species/BCCH",
+    "summary": "Poecile atricapillus"
+  },
+  {
+    "title": "Belted Kingfisher",
+    "path": "/species/BEKI",
+    "summary": "Megaceryle alcyon"
+  },
+  {
+    "title": "Blue-gray Gnatcatcher",
+    "path": "/species/BGGN",
+    "summary": "Polioptila caerulea"
+  },
+  {
+    "title": "Brown-headed Cowbird",
+    "path": "/species/BHCO",
+    "summary": "Molothrus ater"
+  },
+  {
+    "title": "Blue-headed Vireo",
+    "path": "/species/BHVI",
+    "summary": "Vireo solitarius"
+  },
+  {
+    "title": "Blackburnian Warbler",
+    "path": "/species/BLBW",
+    "summary": "Setophaga fusca"
+  },
+  {
+    "title": "Blue Jay",
+    "path": "/species/BLJA",
+    "summary": "Cyanocitta cristata"
+  },
+  {
+    "title": "Blackpoll Warbler",
+    "path": "/species/BLPW",
+    "summary": "Setophaga striata"
+  },
+  {
+    "title": "Bobolink",
+    "path": "/species/BOBO",
+    "summary": "Dolichonyx oryzivorus"
+  },
+  {
+    "title": "Boreal Chickadee",
+    "path": "/species/BOCH",
+    "summary": "Poecile hudsonicus"
+  },
+  {
+    "title": "Bohemian Waxwing",
+    "path": "/species/BOWA",
+    "summary": "Bombycilla garrulus"
+  },
+  {
+    "title": "Brewer's Blackbird",
+    "path": "/species/BRBL",
+    "summary": "Euphagus cyanocephalus"
+  },
+  {
+    "title": "Brown Creeper",
+    "path": "/species/BRCR",
+    "summary": "Certhia americana"
+  },
+  {
+    "title": "Brown Thrasher",
+    "path": "/species/BRTH",
+    "summary": "Toxostoma rufum"
+  },
+  {
+    "title": "Black-throated Blue Warbler",
+    "path": "/species/BTBW",
+    "summary": "Setophaga caerulescens"
+  },
+  {
+    "title": "Black-throated Green Warbler",
+    "path": "/species/BTNW",
+    "summary": "Setophaga virens"
+  },
+  {
+    "title": "Canada Warbler",
+    "path": "/species/CAWA",
+    "summary": "Cardellina canadensis"
+  },
+  {
+    "title": "Clay-colored Sparrow",
+    "path": "/species/CCSP",
+    "summary": "Spizella pallida"
+  },
+  {
+    "title": "Cedar Waxwing",
+    "path": "/species/CEDW",
+    "summary": "Bombycilla cedrorum"
+  },
+  {
+    "title": "Chipping Sparrow",
+    "path": "/species/CHSP",
+    "summary": "Spizella passerina"
+  },
+  {
+    "title": "Cliff Swallow",
+    "path": "/species/CLSW",
+    "summary": "Petrochelidon pyrrhonota"
+  },
+  {
+    "title": "Cape May Warbler",
+    "path": "/species/CMWA",
+    "summary": "Setophaga tigrina"
+  },
+  {
+    "title": "Common Grackle",
+    "path": "/species/COGR",
+    "summary": "Quiscalus quiscula"
+  },
+  {
+    "title": "Connecticut Warbler",
+    "path": "/species/CONW",
+    "summary": "Oporornis agilis"
+  },
+  {
+    "title": "Common Raven",
+    "path": "/species/CORA",
+    "summary": "Corvus corax"
+  },
+  {
+    "title": "Common Yellowthroat",
+    "path": "/species/COYE",
+    "summary": "Geothlypis trichas"
+  },
+  {
+    "title": "Chestnut-sided Warbler",
+    "path": "/species/CSWA",
+    "summary": "Setophaga pensylvanica"
+  },
+  {
+    "title": "Dark-eyed Junco",
+    "path": "/species/DEJU",
+    "summary": "Junco hyemalis"
+  },
+  {
+    "title": "Downy Woodpecker",
+    "path": "/species/DOWO",
+    "summary": "Picoides pubescens"
+  },
+  {
+    "title": "Dusky Flycatcher",
+    "path": "/species/DUFL",
+    "summary": "Empidonax oberholseri"
+  },
+  {
+    "title": "Eastern Bluebird",
+    "path": "/species/EABL",
+    "summary": "Sialia sialis"
+  },
+  {
+    "title": "Eastern Kingbird",
+    "path": "/species/EAKI",
+    "summary": "Tyrannus tyrannus"
+  },
+  {
+    "title": "Eastern Phoebe",
+    "path": "/species/EAPH",
+    "summary": "Sayornis phoebe"
+  },
+  {
+    "title": "Eastern Towhee",
+    "path": "/species/EATO",
+    "summary": "Pipilo erythrophthalmus"
+  },
+  {
+    "title": "Eastern Wood-Pewee",
+    "path": "/species/EAWP",
+    "summary": "Contopus virens"
+  },
+  {
+    "title": "European Starling",
+    "path": "/species/EUST",
+    "summary": "Sturnus vulgaris"
+  },
+  {
+    "title": "Evening Grosbeak",
+    "path": "/species/EVGR",
+    "summary": "Coccothraustes vespertinus"
+  },
+  {
+    "title": "Field Sparrow",
+    "path": "/species/FISP",
+    "summary": "Spizella pusilla"
+  },
+  {
+    "title": "Fox Sparrow",
+    "path": "/species/FOSP",
+    "summary": "Passerella iliaca"
+  },
+  {
+    "title": "Great Crested Flycatcher",
+    "path": "/species/GCFL",
+    "summary": "Myiarchus crinitus"
+  },
+  {
+    "title": "Golden-crowned Kinglet",
+    "path": "/species/GCKI",
+    "summary": "Regulus satrapa"
+  },
+  {
+    "title": "Golden-crowned Sparrow",
+    "path": "/species/GCSP",
+    "summary": "Zonotrichia atricapilla"
+  },
+  {
+    "title": "Gray-cheeked Thrush",
+    "path": "/species/GCTH",
+    "summary": "Catharus minimus"
+  },
+  {
+    "title": "Gray Jay",
+    "path": "/species/GRAJ",
+    "summary": "Perisoreus canadensis"
+  },
+  {
+    "title": "Gray Catbird",
+    "path": "/species/GRCA",
+    "summary": "Dumetella carolinensis"
+  },
+  {
+    "title": "Grasshopper Sparrow",
+    "path": "/species/GRSP",
+    "summary": "Ammodramus savannarum"
+  },
+  {
+    "title": "Greater Yellowlegs",
+    "path": "/species/GRYE",
+    "summary": "Tringa melanoleuca"
+  },
+  {
+    "title": "Golden-winged Warbler",
+    "path": "/species/GWWA",
+    "summary": "Vermivora chrysoptera"
+  },
+  {
+    "title": "Hammond's Flycatcher",
+    "path": "/species/HAFL",
+    "summary": "Empidonax hammondii"
+  },
+  {
+    "title": "Hairy Woodpecker",
+    "path": "/species/HAWO",
+    "summary": "Picoides villosus"
+  },
+  {
+    "title": "Hermit Thrush",
+    "path": "/species/HETH",
+    "summary": "Catharus guttatus"
+  },
+  {
+    "title": "Horned Lark",
+    "path": "/species/HOLA",
+    "summary": "Eremophila alpestris"
+  },
+  {
+    "title": "House Sparrow",
+    "path": "/species/HOSP",
+    "summary": "Passer domesticus"
+  },
+  {
+    "title": "House Wren",
+    "path": "/species/HOWR",
+    "summary": "Troglodytes aedon"
+  },
+  {
+    "title": "Indigo Bunting",
+    "path": "/species/INBU",
+    "summary": "Passerina cyanea"
+  },
+  {
+    "title": "Killdeer",
+    "path": "/species/KILL",
+    "summary": "Charadrius vociferus"
+  },
+  {
+    "title": "Lapland Longspur",
+    "path": "/species/LALO",
+    "summary": "Calcarius lapponicus"
+  },
+  {
+    "title": "Le Conte's Sparrow",
+    "path": "/species/LCSP",
+    "summary": "Ammodramus leconteii"
+  },
+  {
+    "title": "Least Flycatcher",
+    "path": "/species/LEFL",
+    "summary": "Empidonax minimus"
+  },
+  {
+    "title": "Lesser Yellowlegs",
+    "path": "/species/LEYE",
+    "summary": "Tringa flavipes"
+  },
+  {
+    "title": "Lincoln's Sparrow",
+    "path": "/species/LISP",
+    "summary": "Melospiza lincolnii"
+  },
+  {
+    "title": "Magnolia Warbler",
+    "path": "/species/MAWA",
+    "summary": "Setophaga magnolia"
+  },
+  {
+    "title": "Marsh Wren",
+    "path": "/species/MAWR",
+    "summary": "Cistothorus palustris"
+  },
+  {
+    "title": "Mountain Bluebird",
+    "path": "/species/MOBL",
+    "summary": "Sialia currucoides"
+  },
+  {
+    "title": "Mourning Dove",
+    "path": "/species/MODO",
+    "summary": "Zenaida macroura"
+  },
+  {
+    "title": "Mourning Warbler",
+    "path": "/species/MOWA",
+    "summary": "Geothlypis philadelphia"
+  },
+  {
+    "title": "Nashville Warbler",
+    "path": "/species/NAWA",
+    "summary": "Oreothlypis ruficapilla"
+  },
+  {
+    "title": "Nelson's Sparrow",
+    "path": "/species/NESP",
+    "summary": "Ammodramus nelsoni"
+  },
+  {
+    "title": "Northern Cardinal",
+    "path": "/species/NOCA",
+    "summary": "Cardinalis cardinalis"
+  },
+  {
+    "title": "Northern Flicker",
+    "path": "/species/NOFL",
+    "summary": "Colaptes auratus"
+  },
+  {
+    "title": "Northern Parula",
+    "path": "/species/NOPA",
+    "summary": "Setophaga americana"
+  },
+  {
+    "title": "Northern Waterthrush",
+    "path": "/species/NOWA",
+    "summary": "Parkesia noveboracensis"
+  },
+  {
+    "title": "Orange-crowned Warbler",
+    "path": "/species/OCWA",
+    "summary": "Oreothlypis celata"
+  },
+  {
+    "title": "Olive-sided Flycatcher",
+    "path": "/species/OSFL",
+    "summary": "Contopus cooperi"
+  },
+  {
+    "title": "Ovenbird",
+    "path": "/species/OVEN",
+    "summary": "Seiurus aurocapilla"
+  },
+  {
+    "title": "Palm Warbler",
+    "path": "/species/PAWA",
+    "summary": "Setophaga palmarum"
+  },
+  {
+    "title": "Philadelphia Vireo",
+    "path": "/species/PHVI",
+    "summary": "Vireo philadelphicus"
+  },
+  {
+    "title": "Pine Grosbeak",
+    "path": "/species/PIGR",
+    "summary": "Pinicola enucleator"
+  },
+  {
+    "title": "Pine Siskin",
+    "path": "/species/PISI",
+    "summary": "Spinus pinus"
+  },
+  {
+    "title": "Pine Warbler",
+    "path": "/species/PIWA",
+    "summary": "Setophaga pinus"
+  },
+  {
+    "title": "Pileated Woodpecker",
+    "path": "/species/PIWO",
+    "summary": "Dryocopus pileatus"
+  },
+  {
+    "title": "Purple Finch",
+    "path": "/species/PUFI",
+    "summary": "Carpodacus purpureus"
+  },
+  {
+    "title": "Rose-breasted Grosbeak",
+    "path": "/species/RBGR",
+    "summary": "Pheucticus ludovicianus"
+  },
+  {
+    "title": "Red-breasted Nuthatch",
+    "path": "/species/RBNU",
+    "summary": "Sitta canadensis"
+  },
+  {
+    "title": "Ruby-crowned Kinglet",
+    "path": "/species/RCKI",
+    "summary": "Regulus calendula"
+  },
+  {
+    "title": "Red Crossbill",
+    "path": "/species/RECR",
+    "summary": "Loxia curvirostra"
+  },
+  {
+    "title": "Red-eyed Vireo",
+    "path": "/species/REVI",
+    "summary": "Vireo olivaceus"
+  },
+  {
+    "title": "Rock Pigeon",
+    "path": "/species/ROPI",
+    "summary": "Columba livia"
+  },
+  {
+    "title": "Ruby-throated Hummingbird",
+    "path": "/species/RTHU",
+    "summary": "Archilochus colubris"
+  },
+  {
+    "title": "Rusty Blackbird",
+    "path": "/species/RUBL",
+    "summary": "Euphagus carolinus"
+  },
+  {
+    "title": "Ruffed Grouse",
+    "path": "/species/RUGR",
+    "summary": "Bonasa umbellus"
+  },
+  {
+    "title": "Red-winged Blackbird",
+    "path": "/species/RWBL",
+    "summary": "Agelaius phoeniceus"
+  },
+  {
+    "title": "Savannah Sparrow",
+    "path": "/species/SAVS",
+    "summary": "Passerculus sandwichensis"
+  },
+  {
+    "title": "Scarlet Tanager",
+    "path": "/species/SCTA",
+    "summary": "Piranga olivacea"
+  },
+  {
+    "title": "Sedge Wren",
+    "path": "/species/SEWR",
+    "summary": "Cistothorus platensis"
+  },
+  {
+    "title": "Sooty Grouse",
+    "path": "/species/SOGR",
+    "summary": "Dendragapus fuliginosus"
+  },
+  {
+    "title": "Solitary Sandpiper",
+    "path": "/species/SOSA",
+    "summary": "Tringa solitaria"
+  },
+  {
+    "title": "Song Sparrow",
+    "path": "/species/SOSP",
+    "summary": "Melospiza melodia"
+  },
+  {
+    "title": "Spotted Sandpiper",
+    "path": "/species/SPSA",
+    "summary": "Actitis macularius"
+  },
+  {
+    "title": "Swamp Sparrow",
+    "path": "/species/SWSP",
+    "summary": "Melospiza georgiana"
+  },
+  {
+    "title": "Swainson's Thrush",
+    "path": "/species/SWTH",
+    "summary": "Catharus ustulatus"
+  },
+  {
+    "title": "Tennessee Warbler",
+    "path": "/species/TEWA",
+    "summary": "Oreothlypis peregrina"
+  },
+  {
+    "title": "Townsend's Solitaire",
+    "path": "/species/TOSO",
+    "summary": "Myadestes townsendi"
+  },
+  {
+    "title": "Townsend's Warbler",
+    "path": "/species/TOWA",
+    "summary": "Setophaga townsendi"
+  },
+  {
+    "title": "Tree Swallow",
+    "path": "/species/TRES",
+    "summary": "Tachycineta bicolor"
+  },
+  {
+    "title": "Upland Sandpiper",
+    "path": "/species/UPSA",
+    "summary": "Bartramia longicauda"
+  },
+  {
+    "title": "Varied Thrush",
+    "path": "/species/VATH",
+    "summary": "Ixoreus naevius"
+  },
+  {
+    "title": "Veery",
+    "path": "/species/VEER",
+    "summary": "Catharus fuscescens"
+  },
+  {
+    "title": "Vesper Sparrow",
+    "path": "/species/VESP",
+    "summary": "Pooecetes gramineus"
+  },
+  {
+    "title": "Warbling Vireo",
+    "path": "/species/WAVI",
+    "summary": "Vireo gilvus"
+  },
+  {
+    "title": "White-breasted Nuthatch",
+    "path": "/species/WBNU",
+    "summary": "Sitta carolinensis"
+  },
+  {
+    "title": "White-crowned Sparrow",
+    "path": "/species/WCSP",
+    "summary": "Zonotrichia leucophrys"
+  },
+  {
+    "title": "Western Tanager",
+    "path": "/species/WETA",
+    "summary": "Piranga ludoviciana"
+  },
+  {
+    "title": "Western Wood-Pewee",
+    "path": "/species/WEWP",
+    "summary": "Contopus sordidulus"
+  },
+  {
+    "title": "Willow Ptarmigan",
+    "path": "/species/WIPT",
+    "summary": "Lagopus lagopus"
+  },
+  {
+    "title": "Wilson's Snipe",
+    "path": "/species/WISN",
+    "summary": "Gallinago delicata"
+  },
+  {
+    "title": "Wilson's Warbler",
+    "path": "/species/WIWA",
+    "summary": "Cardellina pusilla"
+  },
+  {
+    "title": "Winter Wren",
+    "path": "/species/WIWR",
+    "summary": "Troglodytes hiemalis"
+  },
+  {
+    "title": "Wood Thrush",
+    "path": "/species/WOTH",
+    "summary": "Hylocichla mustelina"
+  },
+  {
+    "title": "White-throated Sparrow",
+    "path": "/species/WTSP",
+    "summary": "Zonotrichia albicollis"
+  },
+  {
+    "title": "White-winged Crossbill",
+    "path": "/species/WWCR",
+    "summary": "Loxia leucoptera"
+  },
+  {
+    "title": "Yellow-bellied Flycatcher",
+    "path": "/species/YBFL",
+    "summary": "Empidonax flaviventris"
+  },
+  {
+    "title": "Yellow-bellied Sapsucker",
+    "path": "/species/YBSA",
+    "summary": "Sphyrapicus varius"
+  },
+  {
+    "title": "Yellow Warbler",
+    "path": "/species/YEWA",
+    "summary": "Setophaga petechia"
+  },
+  {
+    "title": "Yellow-headed Blackbird",
+    "path": "/species/YHBL",
+    "summary": "Xanthocephalus xanthocephalus"
+  },
+  {
+    "title": "Yellow-rumped Warbler",
+    "path": "/species/YRWA",
+    "summary": "Setophaga coronata"
+  },
+  {
+    "title": "Yellow-throated Vireo",
+    "path": "/species/YTVI",
+    "summary": "Vireo flavifrons"
+  }
+]
