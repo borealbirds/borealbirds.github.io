@@ -26,8 +26,12 @@ jobs:
         run: npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: dev
-          BRANCH: master
-          FOLDER: dist
+        with:
+          branch: master # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
+          token: ${{ secrets.GITHUB_TOKEN }}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          BASE_BRANCH: dev
+#          BRANCH: master
+#          FOLDER: dist
