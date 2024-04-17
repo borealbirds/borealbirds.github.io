@@ -16,8 +16,8 @@
         Models were developed based on data from non-arctic portions of Canada. Sampling effort varied greatly across the study area. In general, northern environmental conditions were underrepresented, and southern boreal conditions were overrepresented in comparison with the rest of the study area.
       </p>
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pt-4">
-        <img
-          src="../poisson_noroad_predquant.png"
+        <g-image
+          src="~/static/poisson_noroad_predquant.png"
           alt="Map"
         />
       </div>
@@ -28,8 +28,8 @@
         Separate models were constructed for each of 16 separate spatial subunits consisting of bird conservation regions (BCRs) intersected with Canadian jurisdictional boundaries. Smaller BCR x jurisdiction intersections were merged to maintain adequate sample sizes.
       </p>
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pt-4">
-        <img
-          src="../NationalModelUnits.png"
+        <g-image
+          src="~/static/NationalModelUnits.png"
           alt="Map"
         />
       </div>
