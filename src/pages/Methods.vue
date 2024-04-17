@@ -17,7 +17,7 @@
       </p>
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pt-4">
         <g-image
-          src="~/static/poisson_noroad_predquant.png"
+          src="poisson_noroad_predquant.png"
           alt="Map"
         />
       </div>
@@ -29,7 +29,7 @@
       </p>
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between pt-4">
         <g-image
-          src="~/static/NationalModelUnits.png"
+          src="NationalModelUnits.png"
           alt="Map"
         />
       </div>
