@@ -30,7 +30,8 @@ To locally build and deploy, use the `_build.sh` script (you will need write acc
 Automatic build & deployment enabled via [GitHub Actions](https://github.com/borealbirds/borealbirds.github.io/actions),
 see setup in `.github/workflows/build.yml` file.
 
-## Data
+## Data & methods
 
-- the species mean density raster layers are available in GeoTIFF format from [here](https://drive.google.com/drive/folders/1exWa6vfhGo1DNUL4ei2baDz77as7jYzY?usp=sharing)
+- the species mean density raster layers are available in GeoTIFF format from [here](https://drive.google.com/drive/folders/1aJUZr4fACdD02H8AYejR2XG6zuA6E492?usp=drive_link)
 - access the population size and density estimates via the [JSON API](https://borealbirds.github.io/api/).
+- source code for the methodology is available at [github.com/borealbirds/LandbirdModelsV5](https://github.com/borealbirds/LandbirdModelsV5)
