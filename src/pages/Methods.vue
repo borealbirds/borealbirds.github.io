@@ -129,9 +129,16 @@
       </h2>
       <ul>
         <li class="mb-4">
+          Source code for the methodology is available on <a
+            class="font-normal"
+            href="https://github.com/borealbirds/LandbirdModelsV5"
+            target=_blank
+          >GitHub</a>.
+        </li>
+        <li class="mb-4">
           Download <a
             class="font-normal"
-            href="https://drive.google.com/drive/folders/1exWa6vfhGo1DNUL4ei2baDz77as7jYzY?usp=sharing"
+            href="https://drive.google.com/drive/folders/1aJUZr4fACdD02H8AYejR2XG6zuA6E492?usp=drive_link"
             target=_blank
           >average density</a> raster layers in GeoTIFF format.
         </li>

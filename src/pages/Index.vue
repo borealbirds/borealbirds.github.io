@@ -43,6 +43,13 @@
               Learn more about our methods
             </button>
           </g-link>
+          <p class="mb-4">
+            Source code for the methodology is available on <a
+            class="font-normal"
+            href="https://github.com/borealbirds/LandbirdModelsV5"
+            target=_blank
+            >GitHub</a>.
+          </p>
 
         </div>
       </div> <!-- end contact-me -->
