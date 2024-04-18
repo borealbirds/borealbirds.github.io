@@ -50,6 +50,13 @@
             target=_blank
             >GitHub</a>.
           </p>
+          <p class="mb-4">
+            Download <a
+              class="font-normal"
+              href="https://borealbirds.github.io/api/v4/BAMv4-results-2020-02-20.xlsx"
+              target=_blank
+            >results</a> in Excel (xlsx) format.
+          </p>
 
         </div>
       </div> <!-- end contact-me -->
