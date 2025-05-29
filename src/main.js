@@ -19,6 +19,20 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.use(VueFuse)
 
+  // disable cache - sometimes the images stay cached
+  head.meta.push({
+    name: 'Cache-Control',
+    content: 'no-cache, no-store, must-revalidate'
+  })
+  head.meta.push({
+    name: 'Pragma',
+    content: 'no-cache'
+  })
+  head.meta.push({
+    name: 'Expires',
+    content: '0'
+  })
+
   head.meta.push({
     name: 'keywords',
     content: 'Boreal,Birds,Canada,Avian,Modelling,Project'
