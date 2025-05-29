@@ -74,7 +74,7 @@
     <div class="container-inner mx-auto pb-4">
       <g-image
         :src="figurl"
-        :alt="`Density by lancover for ${$context.english}`"
+        :alt="`Density by land cover for ${$context.english}`"
       />
     </div>
 
@@ -119,7 +119,7 @@
         <li class="mb-4">
           Download <a
             class="font-normal"
-            href="https://borealbirds.github.io/api/v4/BAMv4-results-2020-02-20.xlsx"
+            href="https://borealbirds.github.io/api/v4/BAMv4-results-2025-05-21.xlsx"
             target=_blank
           >results</a> in Excel (xlsx) format. Sheets contain abundance and density estimates and also the list of species, variables, variable importance and validation metrics.
         </li>
@@ -178,7 +178,7 @@ export default {
   data: function () {
     return {
       title: 'Canada',
-      version: '2020-02-20',
+      version: '2025-05-21',
       sppid: '',
       showdet: false,
       figurl: '',
