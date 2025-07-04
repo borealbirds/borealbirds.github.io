@@ -65,7 +65,7 @@
             Since QPAD offsets only adjust the intercept of model estimates, this bug will only affect model outcomes if models were built for density or population estimates per se, or models were compared or integrated across time zones. Relative patterns of density (e.g., habitat coefficients) within time zones should be unaffected.
           </p>
           <p class="mb-4">
-            If you have been affected by this bug, please see the <a href="https://github.com/borealbirds/QPAD-offsets-correction">QPAD-offsets-correction repository</a> for further details or email <a href="mailto:bamp@ualberta.ca">bamp@ualberta.ca</a> for assistance.
+            If you have been affected by this bug, please see the <a class="font-normal" href="https://github.com/borealbirds/QPAD-offsets-correction">QPAD-offsets-correction repository</a> for further details or email <a class="font-normal" href="mailto:bamp@ualberta.ca">bamp@ualberta.ca</a> for assistance.
           </p>
 
         </div>
