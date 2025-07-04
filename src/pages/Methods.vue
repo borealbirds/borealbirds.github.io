@@ -9,13 +9,7 @@
         With these factors in mind, we developed a generalized analytical approach to model species density in relation to environmental covariates, using the Boreal Avian Modelling Project database of point-count surveys (through 2018) and widely available spatial predictors (<a href="https://doi.org/10.7939/R3Z31NW3X">Cumming et al. 2010</a>, <a href="http://dx.doi.org/10.1002/wsb.567">Barker et al. 2015</a>). We developed separate models for each geographic region (bird conservation regions intersected by jurisdiction boundaries) based on covariates such as tree species biomass (local and landscape scale), forest age, topography, land use, and climate. We used machine learning to allow for variable interactions and non-linear responses while avoiding time-consuming species-by-species parameterization. We applied cross-validation to avoid overfitting and bootstrap resampling to estimate uncertainty associated with our density estimates.
       </p>
       <p class="mb-4">
-        Please note, in late March 2025, we discovered and fixed a bug in the code for calculating QPAD offsets that dated back approximately ten years. The bug was within the code used to adjust time zones and therefore affects QPAD offsets used for species with time since sunrise in the top model and in areas outside the mountain time zone.
-      </p>
-      <p class="mb-4">
-        Since QPAD offsets only adjust the intercept of model estimates, this bug will only affect model outcomes if models were built for density or population estimates per se, or models were compared or integrated across time zones. Relative patterns of density (e.g., habitat coefficients) within time zones should be unaffected.
-      </p>
-      <p class="mb-4">
-        If you have been affected by this bug, please see the <a href="https://github.com/borealbirds/QPAD-offsets-correction">QPAD-offsets-correction repository</a> for further details or email <a href="mailto:bamp@ualberta.ca">bamp@ualberta.ca</a> for assistance.
+        Please note, in late March 2025, we discovered a systematic error in the offsets used in these models, and have since updated the products to correct that error. For more information, please see the <a href="https://github.com/borealbirds/QPAD-offsets-correction">QPAD-offsets-correction repository</a> or email <a href="mailto:bamp@ualberta.ca">bamp@ualberta.ca</a>.
       </p>
 
       <h2 class="text-2xl font-bold text-blue-700">
