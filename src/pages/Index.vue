@@ -53,9 +53,19 @@
           <p class="mb-4">
             Download <a
               class="font-normal"
-              href="https://borealbirds.github.io/api/v4/BAMv4-results-2020-02-20.xlsx"
+              href="https://borealbirds.github.io/api/v4/BAMv4-results-2025-05-21.xlsx"
               target=_blank
-            >results</a> in Excel (xlsx) format.
+            >results</a> in Excel (xlsx) format (version May 2025).
+          </p>
+
+          <p class="mb-4">
+            Please note, in late March 2025, we discovered and fixed a bug in the code for calculating QPAD offsets that dated back approximately ten years. The bug was within the code used to adjust time zones and therefore affects QPAD offsets used for species with time since sunrise in the top model and in areas outside the mountain time zone.
+          </p>
+          <p class="mb-4">
+            Since QPAD offsets only adjust the intercept of model estimates, this bug will only affect model outcomes if models were built for density or population estimates per se, or models were compared or integrated across time zones. Relative patterns of density (e.g., habitat coefficients) within time zones should be unaffected.
+          </p>
+          <p class="mb-4">
+            If you have been affected by this bug, please see the <a href="https://github.com/borealbirds/QPAD-offsets-correction">QPAD-offsets-correction repository</a> for further details or email <a href="mailto:bamp@ualberta.ca">bamp@ualberta.ca</a> for assistance.
           </p>
 
         </div>
