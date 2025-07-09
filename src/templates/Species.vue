@@ -112,7 +112,7 @@
         <li class="mb-4">
           Download <a
             class="font-normal"
-            href="https://drive.google.com/drive/folders/1EsD1rLDuvpG4GnW7E7uSfo3wpkmB4ONx?usp=drive_link"
+            href="https://drive.google.com/drive/folders/1EALiDsyUnqNWIfwe4z-fvE7CBjdV1-RV"
             target=_blank
           >average density</a> raster layers in GeoTIFF format.
         </li>

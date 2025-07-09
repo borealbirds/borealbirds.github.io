@@ -32,6 +32,6 @@ see setup in `.github/workflows/build.yml` file.
 
 ## Data & methods
 
-- the species mean density raster layers are available in GeoTIFF format from [here](https://drive.google.com/drive/folders/1aJUZr4fACdD02H8AYejR2XG6zuA6E492?usp=drive_link)
+- the species mean density raster layers are available in GeoTIFF format from [here](https://drive.google.com/drive/folders/1EALiDsyUnqNWIfwe4z-fvE7CBjdV1-RV)
 - access the population size and density estimates via the [JSON API](https://borealbirds.github.io/api/).
 - source code for the methodology is available at [github.com/borealbirds/LandbirdModelsV5](https://github.com/borealbirds/LandbirdModelsV5)
