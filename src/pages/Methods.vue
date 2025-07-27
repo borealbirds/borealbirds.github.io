@@ -134,7 +134,7 @@
         <li class="mb-4">
           Source code for the methodology is available on <a
             class="font-normal"
-            href="https://github.com/borealbirds/LandbirdModelsV5"
+            href="https://github.com/borealbirds/LandbirdModelsV4"
             target=_blank
           >GitHub</a>.
         </li>
@@ -163,13 +163,12 @@
       <h2 class="text-2xl font-bold text-blue-700">
         Citing these results
       </h2>
+
       <p class="mb-4">
-        Boreal Avian Modelling Project, 2020.
-        BAM Generalized National Models Documentation, Version 4.0. Available at <a
-          class="font-normal"
-          href="https://borealbirds.github.io/"
-          target=_blank
-        >https://borealbirds.github.io/</a>. DOI: <a
+        Stralberg, D., Sólymos, P., Docherty, T. D. S., Crosby, A. D., Van Wilgenburg, S. L., Knight, E. C., Drake, A., Boehm, M. M. A., Haché, S., Leston, L., Toms, J. D., Ball, J. R., Song, S. J., Schmiegelow, F. K. A., Cumming, S. C., Bayne, E. M., 2025. A generalized modeling framework for spatially extensive species abundance prediction and population estimation. Ecosphere, in press.
+      </p>
+      <p class="mb-4">
+        Sólymos, P., D. Stralberg, and E. C. Knight. 2025. BAM Generalized National Models Documentation (Version 4.0) [Data set]. Zenodo, DOI: <a
           class="font-normal"
           href="https://dx.doi.org/10.5281/zenodo.4018335"
           target=_blank

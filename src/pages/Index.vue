@@ -61,6 +61,17 @@
             Please note, in late March 2025, we discovered a systematic error in the offsets used in these models, and have since updated the products to correct that error. For more information, please see the <a class="font-normal" href="https://github.com/borealbirds/QPAD-offsets-correction">QPAD-offsets-correction repository</a> or email <a class="font-normal" href="mailto:bamp@ualberta.ca">bamp@ualberta.ca</a>.
           </p>
 
+          <p class="mb-4">
+            Stralberg, D., Sólymos, P., Docherty, T. D. S., Crosby, A. D., Van Wilgenburg, S. L., Knight, E. C., Drake, A., Boehm, M. M. A., Haché, S., Leston, L., Toms, J. D., Ball, J. R., Song, S. J., Schmiegelow, F. K. A., Cumming, S. C., Bayne, E. M., 2025. A generalized modeling framework for spatially extensive species abundance prediction and population estimation. Ecosphere, in press.
+          </p>
+          <p class="mb-4">
+            Sólymos, P., D. Stralberg, and E. C. Knight. 2025. BAM Generalized National Models Documentation (Version 4.0) [Data set]. Zenodo, DOI: <a
+              class="font-normal"
+              href="https://dx.doi.org/10.5281/zenodo.4018335"
+              target=_blank
+            >10.5281/zenodo.4018335</a>.
+          </p>
+
         </div>
       </div> <!-- end contact-me -->
       <!--      <div class="contact-me bg-background-tertiary pt-16">
