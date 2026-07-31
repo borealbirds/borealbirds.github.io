@@ -4,14 +4,11 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import VueScrollTo from 'vue-scrollto'
 import VueFuse from 'vue-fuse'
-import VueDisqus from 'vue-disqus'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   
-  Vue.use(VueDisqus)
-
   Vue.use(VueScrollTo, {
     duration: 500,
     easing: "ease",
@@ -35,17 +32,17 @@ export default function (Vue, { router, head, isClient }) {
 
   head.meta.push({
     name: 'keywords',
-    content: 'Boreal,Birds,Canada,Avian,Modelling,Project'
+    content: 'Boreal,Birds,Canada,Avian,Modelling,Centre,Landbird,Density,Habitat,Models'
   })
 
   head.meta.push({
     name: 'description',
-    content: 'Species Model Results'
+    content: 'BAM Landbird Density & Habitat Model Results — Version 4.0 Archive'
   })
 
   head.meta.push({
     name: 'author',
-    content: 'Boreal Avian Modelling Project'
+    content: 'Boreal Avian Modelling Centre'
   })
 
   head.link.push({

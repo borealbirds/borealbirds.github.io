@@ -1,12 +1,12 @@
 <template>
   <Layout>
     <div class="container-inner mx-auto py-8">
-      <h1 class="text-4xl font-bold mb-8">Methods</h1>
+      <h1 class="text-4xl font-bold mb-8">Landbird Density &amp; Habitat Models — Version 4.0 Methods</h1>
       <p class="mb-4">
         Reliable information on species’ population sizes, trends, habitat associations, and distributions is important for conservation and land-use planning, as well as status assessment and recovery planning for species at risk. However, the development of such estimates at a national scale is challenged by a variety of factors, including sparse data coverage in remote regions (<a href="http://dx.doi.org/10.1890/13-2289.1">Stralberg et al. 2015</a>), differential habitat selection across large geographies (<a href="https://doi.org/10.1111/ddi.12991">Crosby et al. 2019</a>), and variation in survey protocols (<a href="https://doi.org/10.1111/2041-210X.12106">Sólymos et al. 2013</a>).
       </p>
       <p class="mb-4">
-        With these factors in mind, we developed a generalized analytical approach to model species density in relation to environmental covariates, using the Boreal Avian Modelling Project database of point-count surveys (through 2018) and widely available spatial predictors (<a href="https://doi.org/10.7939/R3Z31NW3X">Cumming et al. 2010</a>, <a href="http://dx.doi.org/10.1002/wsb.567">Barker et al. 2015</a>). We developed separate models for each geographic region (bird conservation regions intersected by jurisdiction boundaries) based on covariates such as tree species biomass (local and landscape scale), forest age, topography, land use, and climate. We used machine learning to allow for variable interactions and non-linear responses while avoiding time-consuming species-by-species parameterization. We applied cross-validation to avoid overfitting and bootstrap resampling to estimate uncertainty associated with our density estimates.
+        With these factors in mind, we developed a generalized analytical approach to model species density in relation to environmental covariates, using the Boreal Avian Modelling Centre database of point-count surveys (through 2018) and widely available spatial predictors (<a href="https://doi.org/10.7939/R3Z31NW3X">Cumming et al. 2010</a>, <a href="http://dx.doi.org/10.1002/wsb.567">Barker et al. 2015</a>). We developed separate models for each geographic region (bird conservation regions intersected by jurisdiction boundaries) based on covariates such as tree species biomass (local and landscape scale), forest age, topography, land use, and climate. We used machine learning to allow for variable interactions and non-linear responses while avoiding time-consuming species-by-species parameterization. We applied cross-validation to avoid overfitting and bootstrap resampling to estimate uncertainty associated with our density estimates.
       </p>
       <p class="mb-4">
         Please note, in late March 2025, we discovered a systematic error in the offsets used in these models, and have since updated the products to correct that error. For more information, please see the <a href="https://github.com/borealbirds/QPAD-offsets-correction">QPAD-offsets-correction repository</a> or email <a href="mailto:bamp@ualberta.ca">bamp@ualberta.ca</a>.
@@ -132,6 +132,17 @@
       </h2>
       <ul>
         <li class="mb-4">
+          For additional ways to access and work with current and archived models, visit the <a
+            class="font-normal"
+            href="https://cloud.borealbirds.ca/dashboard"
+            target=_blank
+          >current BAM dashboard</a> or use the <a
+            class="font-normal"
+            href="https://github.com/borealbirds/BAMexploreR"
+            target=_blank
+          >BAMexploreR R package</a>.
+        </li>
+        <li class="mb-4">
           Source code for the methodology is available on <a
             class="font-normal"
             href="https://github.com/borealbirds/LandbirdModelsV4"
@@ -165,12 +176,18 @@
       </h2>
 
       <p class="mb-4">
-        Stralberg, D., Sólymos, P., Docherty, T. D. S., Crosby, A. D., Van Wilgenburg, S. L., Knight, E. C., Drake, A., Boehm, M. M. A., Haché, S., Leston, L., Toms, J. D., Ball, J. R., Song, S. J., Schmiegelow, F. K. A., Cumming, S. C., Bayne, E. M., 2025. A generalized modeling framework for spatially extensive species abundance prediction and population estimation. Ecosphere, in press.
+        <strong>Publication</strong><br>
+        Stralberg, D., Sólymos, P., Docherty, T. D. S., Crosby, A. D., Van Wilgenburg, S. L., Knight, E. C., Drake, A., et al. (2025). A generalized modeling framework for spatially extensive species abundance prediction and population estimation. <em>Ecosphere, 16</em>(10), e70405. <a
+          class="font-normal"
+          href="https://doi.org/10.1002/ecs2.70405"
+          target=_blank
+        >https://doi.org/10.1002/ecs2.70405</a>.
       </p>
       <p class="mb-4">
+        <strong>Model version — Landbird Density &amp; Habitat (v4 archive)</strong><br>
         Sólymos, P., D. Stralberg, and E. C. Knight. 2025. BAM Generalized National Models Documentation (Version 4.0) [Data set]. Zenodo, DOI: <a
           class="font-normal"
-          href="https://dx.doi.org/10.5281/zenodo.4018335"
+          href="https://doi.org/10.5281/zenodo.4018335"
           target=_blank
         >10.5281/zenodo.4018335</a>.
       </p>

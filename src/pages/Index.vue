@@ -14,10 +14,10 @@
       <div class="lg:w-3/4 xl:w-3/4 relative z-10 h-100 lg:mt-16">
         <div>
           <h1 class="text-white text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
-            Boreal Bird Species Results
+            Landbird Density &amp; Habitat Models
           </h1>
           <p class="text-blue-200 text-xl md:text-2xl leading-snug mt-4">
-            by the Boreal Avian Modelling Project
+            Version 4.0 archive by the Boreal Avian Modelling Centre
           </p>
           <p class="text-white text-xl md:text-2xl leading-snug mt-4 mb-8">
             Population sizes, habitat associations, and distributions for status assessment, regional planning, conservation prioritization, and recovery of species at risk
@@ -36,7 +36,7 @@
         <div class="container-inner mx-auto text-xl pb-4 relative">
 
           <p class="mb-4">
-            We developed a generalized analytical approach to model species density in relation to environmental covariates, using the Boreal Avian Modelling Project database of point-count surveys.
+            These archived Version 4.0 Landbird Density &amp; Habitat Models provide density maps, population estimates, habitat associations, and distributions for 143 landbird species.
           </p>
           <g-link to="/methods">
             <button class="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full mb-12">
@@ -46,7 +46,7 @@
           <p class="mb-4">
             Source code for the methodology is available on <a
             class="font-normal"
-            href="https://github.com/borealbirds/LandbirdModelsV5"
+            href="https://github.com/borealbirds/LandbirdModelsV4"
             target=_blank
             >GitHub</a>.
           </p>
@@ -62,12 +62,18 @@
           </p>
 
           <p class="mb-4">
-            Stralberg, D., Sólymos, P., Docherty, T. D. S., Crosby, A. D., Van Wilgenburg, S. L., Knight, E. C., Drake, A., Boehm, M. M. A., Haché, S., Leston, L., Toms, J. D., Ball, J. R., Song, S. J., Schmiegelow, F. K. A., Cumming, S. C., Bayne, E. M., 2025. A generalized modeling framework for spatially extensive species abundance prediction and population estimation. Ecosphere, in press.
+            <strong>Publication</strong><br>
+            Stralberg, D., Sólymos, P., Docherty, T. D. S., Crosby, A. D., Van Wilgenburg, S. L., Knight, E. C., Drake, A., et al. (2025). A generalized modeling framework for spatially extensive species abundance prediction and population estimation. <em>Ecosphere, 16</em>(10), e70405. <a
+              class="font-normal"
+              href="https://doi.org/10.1002/ecs2.70405"
+              target=_blank
+            >https://doi.org/10.1002/ecs2.70405</a>.
           </p>
           <p class="mb-4">
+            <strong>Model version — Landbird Density &amp; Habitat (v4 archive)</strong><br>
             Sólymos, P., D. Stralberg, and E. C. Knight. 2025. BAM Generalized National Models Documentation (Version 4.0) [Data set]. Zenodo, DOI: <a
               class="font-normal"
-              href="https://dx.doi.org/10.5281/zenodo.4018335"
+              href="https://doi.org/10.5281/zenodo.4018335"
               target=_blank
             >10.5281/zenodo.4018335</a>.
           </p>
@@ -78,7 +84,7 @@
         <div class="container-inner mx-auto text-xl pb-4 relative">
 
           <p class="mb-4">
-            We developed a generalized analytical approach to model species density in relation to environmental covariates, using the Boreal Avian Modelling Project database of point-count surveys
+            We developed a generalized analytical approach to model species density in relation to environmental covariates, using the Boreal Avian Modelling Centre database of point-count surveys
           </p>
           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-12">
             Browse results by species

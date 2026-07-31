@@ -14,8 +14,8 @@ const postcssPlugins = [
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
-  siteName: 'BAM Species Models',
-  siteDescription: 'Bird species model results by the Boreal Avian Modelling project',
+  siteName: 'BAM Landbird Density & Habitat Models',
+  siteDescription: 'Archived Version 4.0 landbird density and habitat model results by the Boreal Avian Modelling Centre',
   siteUrl: 'https://borealbirds.github.io/',
   plugins: [
     // {
@@ -48,7 +48,7 @@ module.exports = {
       options: {
         contentTypeName: 'Post',
         feedOptions: {
-          title: 'Bird species model results by the Boreal Avian Modelling project',
+          title: 'Archived Version 4.0 landbird density and habitat model results by the Boreal Avian Modelling Centre',
           feed_url: 'https://borealbirds.github.io/rss.xml',
           site_url: 'https://borealbirds.github.io/'
         },
@@ -56,7 +56,7 @@ module.exports = {
           title: node.title,
           description: node.summary,
           url: 'https://borealbirds.github.io' + node.path,
-          author: 'Boreal Avian Modelling Project',
+          author: 'Boreal Avian Modelling Centre',
           date: node.date
         }),
         output: {

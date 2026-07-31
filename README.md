@@ -1,4 +1,4 @@
-# BAM Model Results Website
+# BAM Landbird Density & Habitat Models — Version 4.0 Archive
 
 Go to [website](https://borealbirds.github.io/) to view the glorious results!
 
@@ -12,7 +12,6 @@ Go to [website](https://borealbirds.github.io/) to view the glorious results!
 - RSS Feed
 - Sitemap in XML
 - Google search crawling disabled at the moment
-- Comments via [Disqus](https://disqus.com/)
 - Bird images from [Unsplash](https://unsplash.com/collections/9507373/birds)
 
 ## Installation
@@ -34,4 +33,4 @@ see setup in `.github/workflows/build.yml` file.
 
 - the species mean density raster layers are available in GeoTIFF format from [here](https://drive.google.com/drive/folders/1EALiDsyUnqNWIfwe4z-fvE7CBjdV1-RV)
 - access the population size and density estimates via the [JSON API](https://borealbirds.github.io/api/).
-- source code for the methodology is available at [github.com/borealbirds/LandbirdModelsV5](https://github.com/borealbirds/LandbirdModelsV5)
+- source code for the methodology is available at [github.com/borealbirds/LandbirdModelsV4](https://github.com/borealbirds/LandbirdModelsV4)

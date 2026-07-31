@@ -15,6 +15,7 @@
 
     <!-- title -->
     <div class="container-inner mx-auto py-4">
+      <p class="text-lg text-copy-secondary mb-2">Landbird Density &amp; Habitat Models &middot; Version 4.0 archive</p>
       <h2 class="text-4xl font-bold">{{ $context.english }}</h2>
       <div class="text-2xl text-copy-secondary mb-4">
         <span v-html="$context.french"></span>
@@ -110,6 +111,17 @@
       <h2 class="text-3xl font-bold">Data accessibility</h2>
       <ul>
         <li class="mb-4">
+          For additional ways to access and work with current and archived models, visit the <a
+            class="font-normal"
+            href="https://cloud.borealbirds.ca/dashboard"
+            target=_blank
+          >current BAM dashboard</a> or use the <a
+            class="font-normal"
+            href="https://github.com/borealbirds/BAMexploreR"
+            target=_blank
+          >BAMexploreR R package</a>.
+        </li>
+        <li class="mb-4">
           Download <a
             class="font-normal"
             href="https://drive.google.com/drive/folders/1EALiDsyUnqNWIfwe4z-fvE7CBjdV1-RV"
@@ -136,25 +148,30 @@
     <div class="container-inner mx-auto py-4">
       <h2 class="text-3xl font-bold">Citing these results</h2>
 
-      Boreal Avian Modelling Project, 2020.
-      BAM Generalized National Models Documentation, Version 4.0. Available at <a
-        class="font-normal"
-        href="https://borealbirds.github.io/"
-        target=_blank
-      >https://borealbirds.github.io/</a>. DOI: <a
-        class="font-normal"
-        href="https://dx.doi.org/10.5281/zenodo.4018335"
-        target=_blank
-      >10.5281/zenodo.4018335</a>.
-      [Results for {{ $context.english }} (<em>{{ $context.scientific }}</em>)]
+      <p class="mb-4">
+        <strong>Publication</strong><br>
+        Stralberg, D., Sólymos, P., Docherty, T. D. S., Crosby, A. D., Van Wilgenburg, S. L., Knight, E. C., Drake, A., et al. (2025). A generalized modeling framework for spatially extensive species abundance prediction and population estimation. <em>Ecosphere, 16</em>(10), e70405. <a
+          class="font-normal"
+          href="https://doi.org/10.1002/ecs2.70405"
+          target=_blank
+        >https://doi.org/10.1002/ecs2.70405</a>.
+      </p>
+      <p class="mb-4">
+        <strong>Model version — Landbird Density &amp; Habitat (v4 archive)</strong><br>
+        Sólymos, P., D. Stralberg, and E. C. Knight. 2025. BAM Generalized National Models Documentation (Version 4.0) [Data set]. Zenodo, DOI: <a
+          class="font-normal"
+          href="https://doi.org/10.5281/zenodo.4018335"
+          target=_blank
+        >10.5281/zenodo.4018335</a>.
+        [Results for {{ $context.english }} (<em>{{ $context.scientific }}</em>)]
+      </p>
     </div>
 
     <div class="container-inner mx-auto py-4">
-      <vue-disqus
-        shortname="borealbirds"
-        :identifier="$context.id"
-        :title="$context.english"
-      ></vue-disqus>
+      Questions about these results? <a
+        class="font-normal"
+        href="https://borealbirds.ca/contact/"
+      >Contact the Boreal Avian Modelling Centre.</a>
     </div>
 
   </Layout>
@@ -170,7 +187,7 @@ export default {
     }
   },
   metaInfo: {
-    title: 'Results',
+    title: 'Landbird Density & Habitat Results',
     meta: [
       { name: 'charset', content: 'utf-8' }
     ]
